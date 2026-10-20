@@ -47,6 +47,8 @@ See `AGENTS.md` for authoring instructions. The current website export contains 
 
 The proposed [versioned documentation data plan](docs/documentation-data-plan.md) moves settings and shortcut sources into the native repository, with schemas, coverage gates, pinned exports and human review before publication.
 
+The **Follow DAW main settings** workflow polls only `suhina-daw/suhina-daw`'s `main` branch about every 30 minutes. It imports the committed version-one export at `docs/guide-data/settings.json`, validates it, tests/builds and records changes with source provenance. It never reads local or PR-branch settings. [Native export PR #783](https://github.com/suhina-daw/suhina-daw/pull/783) must merge first; until a valid source export is available, synchronization fails without replacing website data. Setting `PAGES_SYNC_PUBLISH=true` after the initial Pages setup enables automatic publication of source-approved data updates without another web content approval. See [publishing](docs/publishing.md).
+
 Only the setting list fades for 500 ms when changing categories; headings, search, filters, entry count and Reset filters stay in place. The opening hero and expanded help also use motion. All respect reduced-motion preferences. Fonts use Google Fonts with local fallbacks. External release links lead to pre-alpha nightly builds. The complete settings reference is one part of a broader product site; this is not yet a complete application manual.
 
 ## License and repository
