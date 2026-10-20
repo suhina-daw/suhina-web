@@ -2,6 +2,8 @@
 
 Checked on 2026-10-21 against the local Suhina checkout at commit `430a100958d0dc55d9561eb0d2305480b1ccf33a`. This is a documentation-only website change; the native working tree was read without modification, branch changes or application restarts.
 
+Later on the same day, a read-only completeness check against the concurrently developed native working tree found three additional settings without matching help: `liquid_panel_strength`, `liquid_track_strength` and `liquid_clip_strength`. The 73-entry website snapshot is unchanged; it is not a claim of coverage for those newer native controls. Their content review belongs in the DAW repository under the revised source-ownership plan. The recorded local review commit was not available from the GitHub commit endpoint when publishing preparation was checked, so it cannot serve as a remote CI source pin. Future exports must use reachable immutable source revisions.
+
 `settings-help.json` contains implementation-checked help for all 73 exported rows, including the three pre-existing entries. Each entry records the native control, implementation and relevant spec paths used for its review. Defaults were checked in `Settings::default`, `ViewSettings::default`, `TrackSizes::default`, `UpdateSettings::default`, the workflow definitions and the library store. References stay in authored contributor data, outside individual page explanations.
 
 The yellow Work in progress pill currently marks:

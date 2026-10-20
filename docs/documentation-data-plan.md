@@ -1,10 +1,10 @@
 # Versioned settings and shortcut documentation
 
-Status: proposed; no native-repository changes or publishing automation implemented.
+Status: native export and synchronization proposed; an initial manually dispatched Pages workflow is prepared in the website. No native-repository changes made.
 
 ## Ownership and source
 
-Maintain the setting catalog, action catalog and authored English explanations in the Suhina repository. The website consumes a reviewed export; it must not maintain a second independent description of native behavior. Keep the product introduction and beginner guides in the website repository and preserve the current Vue design.
+Maintain the setting catalog, action catalog and authored English explanations in the Suhina repository. The website consumes a reviewed export; it must not maintain a second independent description of native behavior. As clarified by the user, human content review happens once, in the DAW repository alongside the implementation. The web repository performs technical validation, not another content approval. Keep the product introduction and beginner guides in the website repository and preserve the current Vue design.
 
 Suggested native layout:
 
@@ -43,13 +43,15 @@ References remain contributor evidence. Do not add raw JSON or source-code links
 3. Test representative OS/preset exports and known context-sensitive actions. Test malformed and oversized data in the website validator, including the implementation-status field. Test search over descriptions, options, contexts and status.
 4. Export reproducibly from an immutable native revision. Native CI should verify expected output rather than silently rewrite reviewed content. Store schemas with fixtures and explicit compatibility tests; a breaking contract increments `schemaVersion`.
 5. A human reviews authored prose and behavior claims in a pull request. AI may prepare drafts and flag stale evidence; it must not set a human approval flag or publish unreviewed content. Restrict merge and release permissions to the intended maintainers.
-6. Website CI validates a pinned export, checks completeness, runs the website build and tests, and checks production UI behavior. A missing native checkout must fail clearly, not silently omit the coverage gate. Until migration, explicitly provide a matching native checkout to `sync-settings.py --require-help`.
+6. Website CI validates the received export's contract and provenance and runs the website build and tests. Native CI owns registry coverage, fingerprints and content approval. Web CI does not check out the native repository or ask for another human settings review. Until migration, the local authoring command `sync-settings.py --require-help` still needs a matching native checkout; this temporary tool does not belong in the future website publishing gate.
 
 The current `helpStatus: reviewed` means that the author checked the implementation and copied its current fingerprint. It is not proof that a maintainer approved the prose for public release. Keep release approval a separate protected process.
 
 ## Transfer and version selection
 
-After native review and merge, create a release artifact containing the two JSON files, their schemas and a checksum manifest. Preserve artifacts per app version/revision. A website update pins an exact artifact revision and checks its digest, then opens a reviewable change with both files and provenance. No deployment follows merely because an AI-generated export exists.
+After native review and merge, native CI creates an immutable artifact containing the two JSON files, their schemas and a checksum manifest. Preserve artifacts per app version/revision. A source workflow notifies the website with the exact artifact revision; a narrowly scoped GitHub App can provide cross-repository dispatch and commit permissions. GitHub's ordinary per-repository workflow token is not sufficient authorization to write another repository. Do not add credentials to either JSON file.
+
+The website synchronization job verifies the originating repository, approved workflow/revision and artifact digest, then copies the files unchanged and records provenance in an automated commit. Technical checks run on that exact commit; on success, publish the updated static build automatically. A failed source coverage check produces no promotable artifact. A failed web schema/build check leaves the previous site online. No second content-review PR or human approval is required in the website. Direct AI-authored drafts that have not passed native review cannot enter this path.
 
 The website initially keeps one explicit supported version. Later, a version selector can load archived artifacts without mixing a current settings catalog with shortcuts from an older build. Unsupported schema versions show a useful error rather than partially rendering incorrect instructions. Preserve URLs by stable IDs and aliases.
 
@@ -59,7 +61,7 @@ The website initially keeps one explicit supported version. Later, a version sel
 2. Move settings prose to the native repo in a separately authorized change. Acceptance: all 73 current website entries retain reviewed explanations, references, conditions and feature-status notes; native CI rejects missing/stale help.
 3. Export shortcut metadata and write its contextual explanations. Acceptance: complete registry coverage, each preset and supported OS checked, and the reset/preset behavior verified against implementation rather than older prose.
 4. Produce immutable artifacts and update the website parser. Acceptance: deterministic exports, schema compatibility tests, a pinned provenance manifest and graceful handling of invalid input.
-5. Introduce a reviewed synchronization PR workflow. Acceptance: changes remain reviewable, no credentials or user keymaps are published, and publishing requires the maintainer’s existing release authorization.
+5. Introduce automatic synchronization from approved native artifacts. Acceptance: source review is the only content approval; the website validates provenance and structure, records an auditable update and deploys after passing technical checks. No credentials or user keymaps are published. The initial decision to enable this publishing path still requires release authorization.
 
 Local user `keymap.json` import is a later feature. If implemented, parse it only in the browser, bound its size, validate its structure and resolve it against the selected app version and preset. Never upload it automatically. Show user overrides and conflicts without altering the official defaults.
 
