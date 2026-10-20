@@ -1,6 +1,6 @@
 # Versioned settings and shortcut documentation
 
-Status: native export and synchronization proposed; an initial manually dispatched Pages workflow is prepared in the website. No native-repository changes made.
+Status: settings export and main-only website synchronization implemented in separate companion branches/PRs; merge the native export first. Shortcut export remains proposed. Initial Pages/domain activation is separate.
 
 ## Ownership and source
 
@@ -49,9 +49,13 @@ The current `helpStatus: reviewed` means that the author checked the implementat
 
 ## Transfer and version selection
 
-After native review and merge, native CI creates an immutable artifact containing the two JSON files, their schemas and a checksum manifest. Preserve artifacts per app version/revision. A source workflow notifies the website with the exact artifact revision; a narrowly scoped GitHub App can provide cross-repository dispatch and commit permissions. GitHub's ordinary per-repository workflow token is not sufficient authorization to write another repository. Do not add credentials to either JSON file.
+The implemented first slice commits `docs/guide-data/settings.json` with `schemaVersion: 1` and `entries` in the native repository. Its exporter and required docs tests check coverage and deterministic output in source PRs. The website polls that exact file from official `main` about every 30 minutes, verifies official origin and `origin/main`, and reads the committed Git blob. It records the actual fetched commit in `public/settings-source.json`. Missing or invalid exports fail without replacing site data. The original web help covered 73 UI-branch entries, while the native main migration intentionally contains only its current 61 settings; other controls enter with their native merges and reviewed help.
 
-The website synchronization job verifies the originating repository, approved workflow/revision and artifact digest, then copies the files unchanged and records provenance in an automated commit. Technical checks run on that exact commit; on success, publish the updated static build automatically. A failed source coverage check produces no promotable artifact. A failed web schema/build check leaves the previous site online. No second content-review PR or human approval is required in the website. Direct AI-authored drafts that have not passed native review cannot enter this path.
+Polling needs no cross-repository token or source dispatch permission. The website's own workflow token commits validated data updates. Once the initial website publishing configuration is authorized, `PAGES_SYNC_PUBLISH=true` enables automatic deployment in that same synchronization workflow, since commits pushed by the workflow token do not trigger a second push workflow.
+
+For the later shortcuts/version-selector slice, preserve both exports, schemas and a digest manifest per immutable app revision. Optional source push notifications can later replace polling, but must still resolve and consume `main`, never a supplied feature ref. Do not add credentials to either JSON file.
+
+The website synchronization job verifies the source repository, main revision and data contract, then copies the website fields and records provenance in an automated commit. Technical checks run before committing/publishing the changed data. A failed source coverage check prevents the source export from merging through the required native CI. A failed web schema/build check leaves the previous site online. No second content-review PR or human approval is required in the website. Direct AI-authored drafts that have not passed native review cannot enter this path.
 
 The website initially keeps one explicit supported version. Later, a version selector can load archived artifacts without mixing a current settings catalog with shortcuts from an older build. Unsupported schema versions show a useful error rather than partially rendering incorrect instructions. Preserve URLs by stable IDs and aliases.
 

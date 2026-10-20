@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .vite/
+.native-source/
 __pycache__/
 *.pyc
 *.log
