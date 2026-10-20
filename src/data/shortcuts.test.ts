@@ -13,6 +13,8 @@ export function shortcutFixture() {
 test('shortcut contract rejects incomplete, duplicate and unsupported data', () => {
   const source = shortcutFixture()
   assert.equal(parseShortcuts(source).length, 1)
+  const commands = parseShortcuts({ ...source, entries: [{ ...source.entries[0], category: 'Commands' }] })
+  assert.equal(filterShortcuts(commands, 'Commands', '', 'Select-first', 'windows').length, 1)
   assert.throws(() => parseShortcuts({ ...source, schemaVersion: 2 }))
   assert.throws(() => parseShortcuts({ ...source, scope: 'all-actions' }))
   assert.throws(() => parseShortcuts({ ...source, entries: [] }))

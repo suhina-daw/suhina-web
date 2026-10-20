@@ -1,4 +1,4 @@
-export const shortcutCategories = ['File', 'Transport', 'View', 'Edit', 'Tracks', 'Session', 'Piano roll', 'Help'] as const
+export const shortcutCategories = ['File', 'Transport', 'View', 'Edit', 'Tracks', 'Session', 'Piano roll', 'Help', 'Commands'] as const
 export const presets = ['Select-first', 'Draw-first', 'Mouse-first'] as const
 export const platforms = { windows: 'Windows', linux: 'Linux', macos: 'macOS' } as const
 export type ShortcutCategory = typeof shortcutCategories[number]
