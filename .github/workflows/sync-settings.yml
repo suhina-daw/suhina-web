@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '17,47 * * * *'
   workflow_dispatch:
+    inputs:
+      retry_publish:
+        description: Rebuild and retry publishing even when settings are unchanged
+        type: boolean
+        required: true
+        default: false
 
 concurrency:
   group: native-main-settings
@@ -45,11 +51,11 @@ jobs:
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-      - if: steps.changes.outputs.changed == 'true'
+      - if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)
         run: npm ci
-      - if: steps.changes.outputs.changed == 'true'
+      - if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)
         run: npm test
-      - if: steps.changes.outputs.changed == 'true'
+      - if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)
         run: npm run build
       - name: Record the validated source update
         if: steps.changes.outputs.changed == 'true'
@@ -59,14 +65,14 @@ jobs:
           git add public/settings.json public/settings-source.json
           git commit -m 'Sync settings from approved DAW main export'
           git push origin HEAD:main
-      - if: steps.changes.outputs.changed == 'true'
+      - if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
   publish:
     needs: sync
-    if: needs.sync.outputs.changed == 'true' && vars.PAGES_SYNC_PUBLISH == 'true'
+    if: (needs.sync.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)) && vars.PAGES_SYNC_PUBLISH == 'true'
     runs-on: ubuntu-latest
     permissions:
       pages: write
