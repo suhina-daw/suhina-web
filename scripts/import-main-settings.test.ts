@@ -44,6 +44,38 @@ test('import uses only committed official main data and rejects another revision
     assert.equal(provenance.branch, 'main')
     assert.equal(provenance.commit, git('rev-parse', 'HEAD'))
     assert.equal(importMainSettings(source, target), false)
+    const shortcutFile = join(source, 'docs/guide-data/shortcuts.json')
+    const shortcutExport = { schemaVersion: 1, scope: 'default-and-window-actions', entries: [{
+      id: 'test.action', name: 'Fixture action', category: 'Edit', description: 'Test description.',
+      context: 'Test focus.', whenToUse: 'Test case.', platformNotes: 'Test platforms.',
+      sourceFingerprint: 'a'.repeat(64), helpStatus: 'reviewed', bindings: Object.fromEntries(
+        ['Select-first', 'Draw-first', 'Mouse-first'].map(preset => [preset, {
+          windows: [['Ctrl', 'B']], linux: [['Ctrl', 'B']], macos: [['Cmd', 'B']],
+        }])) }] }
+    writeFileSync(shortcutFile, JSON.stringify(shortcutExport))
+    git('add', 'docs/guide-data/shortcuts.json')
+    git('commit', '-m', 'Add source-owned shortcut fixture')
+    git('update-ref', 'refs/remotes/origin/main', 'HEAD')
+    writeFileSync(shortcutFile, '{"dirty":true}')
+    assert.equal(importMainSettings(source, target), true)
+    assert.equal(JSON.parse(readFileSync(join(target, 'shortcuts.json'), 'utf8')).entries[0].id, 'test.action')
+    assert.equal(JSON.parse(readFileSync(join(target, 'shortcuts-source.json'), 'utf8')).commit, git('rev-parse', 'HEAD'))
+    assert.equal(importMainSettings(source, target), false)
+    const oldSettings = readFileSync(join(target, 'settings.json'), 'utf8')
+    const oldShortcuts = readFileSync(join(target, 'shortcuts.json'), 'utf8')
+    writeFileSync(nativeFile, JSON.stringify({ schemaVersion: 1, entries: entries.map((row: object) => ({ ...row, note: 'Changed fixture' })) }))
+    writeFileSync(shortcutFile, JSON.stringify({ ...shortcutExport, schemaVersion: 9 }))
+    git('add', '.')
+    git('commit', '-m', 'Invalid shortcut schema with changed settings')
+    git('update-ref', 'refs/remotes/origin/main', 'HEAD')
+    assert.throws(() => importMainSettings(source, target), /Unsupported/)
+    assert.equal(readFileSync(join(target, 'settings.json'), 'utf8'), oldSettings)
+    assert.equal(readFileSync(join(target, 'shortcuts.json'), 'utf8'), oldShortcuts)
+    git('rm', 'docs/guide-data/shortcuts.json')
+    git('commit', '-m', 'Source unexpectedly removes shortcut export')
+    git('update-ref', 'refs/remotes/origin/main', 'HEAD')
+    assert.throws(() => importMainSettings(source, target), /disappeared/)
+    assert.equal(readFileSync(join(target, 'settings.json'), 'utf8'), oldSettings)
     git('commit', '--allow-empty', '-m', 'Unmerged revision')
     assert.throws(() => importMainSettings(source, target), /origin\/main/)
     git('update-ref', 'refs/remotes/origin/main', 'HEAD')

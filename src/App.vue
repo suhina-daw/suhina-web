@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection.vue'
 import GuideSection from './components/GuideSection.vue'
 import FirstSound from './components/FirstSound.vue'
 import SettingsReference from './components/SettingsReference.vue'
+import ShortcutsReference from './components/ShortcutsReference.vue'
 import WorkflowSection from './components/WorkflowSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import { parseSettings } from './data/settings'
@@ -57,10 +58,14 @@ async function loadSettings() {
 }
 onMounted(() => {
   document.addEventListener('keydown', handleKey)
-  void loadSettings()
-  // Hash anchors may arrive before Vue has mounted the section elements.
-  const anchor = document.getElementById(window.location.hash.slice(1))
-  anchor?.scrollIntoView()
+  const initialHash = window.location.hash
+  // Settings render above later chapters; resolve deep links after that async layout settles.
+  void loadSettings().then(async () => {
+    await nextTick()
+    if (initialHash && window.location.hash === initialHash) {
+      document.getElementById(initialHash.slice(1))?.scrollIntoView()
+    }
+  })
 })
 onUnmounted(() => {
   document.removeEventListener('keydown', handleKey)
@@ -78,6 +83,7 @@ onUnmounted(() => {
         <GuideSection :count="loaded ? settings.length : null" />
         <FirstSound />
         <SettingsReference ref="reference" :settings="settings" :category="category" :loading="loading" :error="error" @category="selectCategory" @retry="loadSettings" />
+        <ShortcutsReference />
         <WorkflowSection @category="selectCategory" />
         <SiteFooter />
       </main>

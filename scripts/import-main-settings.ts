@@ -3,6 +3,7 @@ import { existsSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { parseSettings } from '../src/data/settings.ts'
+import { parseShortcuts } from '../src/data/shortcuts.ts'
 
 export function validateExport(value: unknown) {
   if (typeof value !== 'object' || value === null || Array.isArray(value)
@@ -43,18 +44,40 @@ export function importMainSettings(source: string, destination: string) {
     encoding: 'utf8', maxBuffer: 5 * 1024 * 1024,
   })
   const entries = validateExport(JSON.parse(blob))
+  // Validate both source documents before changing either website export.
+  const shortcutPath = 'docs/guide-data/shortcuts.json'
+  const hasShortcuts = !!git('ls-tree', '--name-only', commit, '--', shortcutPath)
+  let shortcuts: string | undefined
+  if (hasShortcuts) {
+    const shortcutBlob = execFileSync('git', ['-C', source, 'show', `${commit}:${shortcutPath}`], {
+      encoding: 'utf8', maxBuffer: 5 * 1024 * 1024,
+    })
+    shortcuts = JSON.stringify({ schemaVersion: 1, scope: 'default-and-window-actions',
+      entries: parseShortcuts(JSON.parse(shortcutBlob)) }, null, 2) + '\n'
+  } else if (existsSync(resolve(destination, 'shortcuts.json'))) {
+    throw new Error('The main shortcut export disappeared; refusing to publish stale data.')
+  }
   const output = JSON.stringify(entries, null, 2) + '\n'
   const target = resolve(destination, 'settings.json')
-  if (readFileSync(target, 'utf8') === output && existsSync(resolve(destination, 'settings-source.json'))) return false
+  const shortcutTarget = resolve(destination, 'shortcuts.json')
+  const shortcutsSame = shortcuts === undefined || (existsSync(shortcutTarget) && readFileSync(shortcutTarget, 'utf8') === shortcuts
+    && existsSync(resolve(destination, 'shortcuts-source.json')))
+  if (readFileSync(target, 'utf8') === output && existsSync(resolve(destination, 'settings-source.json')) && shortcutsSame) return false
   writeFileSync(target, output)
   writeFileSync(resolve(destination, 'settings-source.json'), JSON.stringify({
     repository: 'suhina-daw/suhina-daw', branch: 'main', commit, schemaVersion: 1,
   }, null, 2) + '\n')
+  if (shortcuts !== undefined) {
+    writeFileSync(shortcutTarget, shortcuts)
+    writeFileSync(resolve(destination, 'shortcuts-source.json'), JSON.stringify({
+      repository: 'suhina-daw/suhina-daw', branch: 'main', commit, schemaVersion: 1,
+    }, null, 2) + '\n')
+  }
   return true
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const source = process.argv[2]
   if (!source || process.argv.length !== 3) throw new Error('Usage: import-main-settings.ts <official-main-checkout>')
-  console.log(importMainSettings(resolve(source), resolve('public')) ? 'Imported native main settings.' : 'Settings unchanged.')
+  console.log(importMainSettings(resolve(source), resolve('public')) ? 'Imported native main guide data.' : 'Guide data unchanged.')
 }

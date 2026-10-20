@@ -46,7 +46,7 @@ jobs:
         run: node --experimental-strip-types scripts/import-main-settings.ts .native-source
       - id: changes
         run: |
-          if test -z "$(git status --porcelain -- public/settings.json public/settings-source.json)"; then
+          if test -z "$(git status --porcelain -- public/settings.json public/settings-source.json public/shortcuts.json public/shortcuts-source.json)"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -63,7 +63,10 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add public/settings.json public/settings-source.json
-          git commit -m 'Sync settings from approved DAW main export'
+          if test -f public/shortcuts.json; then
+            git add public/shortcuts.json public/shortcuts-source.json
+          fi
+          git commit -m 'Sync guide data from approved DAW main exports'
           git push origin HEAD:main
       - if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.retry_publish)
         uses: actions/upload-pages-artifact@v4

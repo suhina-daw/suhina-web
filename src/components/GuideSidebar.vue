@@ -17,6 +17,7 @@ const emit = defineEmits<{ category: [category: Category]; search: [] }>()
         @click="emit('category', key)">
         <span>{{ String(index + 1).padStart(2, '0') }}</span>{{ label }}
       </a>
+      <a href="#shortcuts"><span>↗</span> Keyboard shortcuts</a>
     </nav>
     <div class="sidebar-bottom"><span class="status-dot"></span> A work in progress.
       <p>Open source. Open possibilities.</p>
