@@ -1,6 +1,6 @@
 # Suhina web
 
-The Suhina product guide and searchable settings reference. Built with Vue 3, TypeScript, Vite, plain CSS, and Motion for Vue. The existing visual design is kept in reusable Vue components.
+The Suhina product website, beginner guide and searchable settings/shortcut references. Built with Vue 3, TypeScript, Vite, plain CSS, and Motion for Vue. The existing visual design is kept in reusable Vue components.
 
 ## Development
 
@@ -64,3 +64,9 @@ The new `#shortcuts` section supports action/key search, categories, OS and pres
 The companion [native PR #789](https://github.com/suhina-daw/suhina-daw/pull/789) owns `docs/guide-data/shortcuts-help.json`, the deterministic `shortcuts.json` export and its coverage gate. The first directory covers all default-bound actions and window actions; parameterless commands without default keys are not part of this directory. Prose is reviewed once in the DAW PR. The web importer reads only the official committed main export, validates both settings and shortcuts before changing files, and records `shortcuts-source.json` provenance. If main has not gained its first shortcut export yet, settings sync continues and the page shows an unavailable state; after the first import, disappearing source data fails closed. Never publish a local preview of unmerged shortcut prose.
 
 For local review only, copy the companion branch's generated shortcut export to `public/shortcuts.json` and build. Do not commit that preview file to this website branch. Once the native PR merges, the main-only sync creates the production data automatically. Website feedback and native content feedback have separate footer links; the Contribute disclosure offers matching DAW and Web links.
+
+## Local product-page proposal
+
+The current local proposal separates the product homepage (`/`) from `/guide/`, `/settings/` and `/shortcuts/`. Vite emits a directory index for each route so static-host refreshes work. Existing `/#settings`, `/#shortcuts`, `/#guide` and `/#first-sound` links are retained through redirects. Settings links may include `category` and `q` query parameters.
+
+See [the product-page review notes](docs/product-homepage.md) for main-source claim checks, the illustration/screenshot distinction and the local-only preview policy. This proposal is for localhost review before any publication.

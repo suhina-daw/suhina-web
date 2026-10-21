@@ -1,7 +1,20 @@
 <script setup lang="ts">
 defineProps<{ count: number | null }>()
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
-<section class="guide-section" id="guide"><div class="section-heading"><div><div class="eyebrow">A GOOD PLACE TO START</div><h2>Find your way in.</h2></div><span class="small-note">A little guidance. A lot of possibility.</span></div><div class="guide-grid"><a class="guide-card" href="#first-sound"><span class="card-num">01 / START HERE</span><div class="card-icon">↗</div><h3>Your first sound</h3><p>Connect your audio, open a project,<br>and get something moving.</p><span class="card-footer">THE ESSENTIALS <span>→</span></span></a><a class="guide-card" href="#settings"><span class="card-num">02 / MAKE IT YOURS</span><div class="card-icon sliders">≡</div><h3>A setting for that.</h3><p>What it does. Where to find it.<br>All the options, without the overwhelm.</p><span class="card-footer"><span id="setting-count">{{ count === null ? 'SETTINGS REFERENCE' : `${count} REFERENCE ENTRIES` }}</span> <span>→</span></span></a><a class="guide-card" href="#workflow"><span class="card-num">03 / FIND YOUR FLOW</span><div class="card-icon">⌘</div><h3>Work your way</h3><p>Clips, shortcuts, and small changes<br>that keep you in the moment.</p><span class="card-footer">WORKFLOW NOTES <span>→</span></span></a></div></section>
+<section class="guide-section" id="guide">
+  <div class="eyebrow">THE SUHINA FIELD GUIDE</div><h1>Start with a sound.</h1><p class="guide-intro">Connect your audio, learn the controls, and find the details when you need them.</p>
+  <div class="guide-grid">
+    <a class="guide-card" href="#first-sound"><span class="card-num">01 / GET STARTED</span><div class="card-icon">↗</div><h3>Your first sound</h3><p>Choose an output and get your audio setup ready.</p><span class="card-footer">THE ESSENTIALS <span>→</span></span></a>
+    <a class="guide-card" :href="`${base}settings/`"><span class="card-num">02 / LOOK IT UP</span><div class="card-icon sliders">≡</div><h3>Settings, explained.</h3><p>What each control changes, its options, and when to use it.</p><span class="card-footer">SETTINGS REFERENCE <span>→</span></span></a>
+    <a class="guide-card" :href="`${base}shortcuts/`"><span class="card-num">03 / LEARN THE KEYS</span><div class="card-icon">⌘</div><h3>Keyboard shortcuts</h3><p>Find an action, its keys, and the right context to use it.</p><span class="card-footer">SHORTCUT REFERENCE <span>→</span></span></a>
+  </div>
+</section>
 </template>
+
+<style scoped>
+h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.12; letter-spacing: -.06em; font-weight: 500; margin: 24px 0 18px; }
+.guide-intro { max-width: 480px; color: var(--muted); font-size: 13px; }
+</style>

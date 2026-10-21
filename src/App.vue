@@ -3,18 +3,21 @@ import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { MotionConfig } from 'motion-v'
 import SiteHeader from './components/SiteHeader.vue'
 import GuideSidebar from './components/GuideSidebar.vue'
-import HeroSection from './components/HeroSection.vue'
+import ProductHome from './components/ProductHome.vue'
 import GuideSection from './components/GuideSection.vue'
 import FirstSound from './components/FirstSound.vue'
 import SettingsReference from './components/SettingsReference.vue'
 import ShortcutsReference from './components/ShortcutsReference.vue'
-import WorkflowSection from './components/WorkflowSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
-import { parseSettings } from './data/settings'
+import { pages, parseSettings } from './data/settings'
 import type { Category, Setting } from './data/settings'
+import { pageUrl, resolvePage } from './data/pages'
+
+const page = resolvePage(window.location.pathname, import.meta.env.BASE_URL)
 
 const settings = ref<Setting[]>([])
-const category = ref<Category>('All')
+const initialCategory = new URLSearchParams(window.location.search).get('category')
+const category = ref<Category>(initialCategory && Object.hasOwn(pages, initialCategory) ? initialCategory as Category : 'All')
 const loading = ref(true)
 const loaded = ref(false)
 const error = ref('')
@@ -24,8 +27,19 @@ let request: AbortController | undefined
 function selectCategory(value: Category) {
   category.value = value
   reference.value?.clearSearch()
+  if (page === 'settings') {
+    const url = new URL(window.location.href)
+    url.searchParams.delete('q')
+    if (value === 'All') url.searchParams.delete('category')
+    else url.searchParams.set('category', value)
+    window.history.replaceState(null, '', url)
+  }
 }
 async function focusSearch() {
+  if (page !== 'settings') {
+    window.location.href = `${pageUrl('settings', import.meta.env.BASE_URL)}#settings-search`
+    return
+  }
   window.location.hash = 'settings'
   await nextTick()
   reference.value?.focusSearch()
@@ -60,10 +74,12 @@ onMounted(() => {
   document.addEventListener('keydown', handleKey)
   const initialHash = window.location.hash
   // Settings render above later chapters; resolve deep links after that async layout settles.
-  void loadSettings().then(async () => {
+  const ready = page === 'settings' ? loadSettings() : Promise.resolve()
+  void ready.then(async () => {
     await nextTick()
     if (initialHash && window.location.hash === initialHash) {
       document.getElementById(initialHash.slice(1))?.scrollIntoView()
+      if (page === 'settings' && initialHash === '#settings-search') reference.value?.focusSearch()
     }
   })
 })
@@ -75,18 +91,21 @@ onUnmounted(() => {
 
 <template>
   <MotionConfig reduced-motion="user">
-    <SiteHeader />
-    <div class="shell">
-      <GuideSidebar :category="category" @category="selectCategory" @search="focusSearch" />
-      <main id="home">
-        <HeroSection />
-        <GuideSection :count="loaded ? settings.length : null" />
-        <FirstSound />
-        <SettingsReference ref="reference" :settings="settings" :category="category" :loading="loading" :error="error" @category="selectCategory" @retry="loadSettings" />
-        <ShortcutsReference />
-        <WorkflowSection @category="selectCategory" />
+    <SiteHeader :page="page" />
+    <template v-if="page === 'home'"><main class="product-page"><ProductHome /></main><SiteFooter /></template>
+    <div v-else class="shell">
+      <GuideSidebar :category="category" :page="page" @category="selectCategory" @search="focusSearch" />
+      <main class="reference-page">
+        <template v-if="page === 'guide'"><GuideSection :count="loaded ? settings.length : null" /><FirstSound /></template>
+        <SettingsReference v-if="page === 'settings'" ref="reference" :settings="settings" :category="category" :loading="loading" :error="error" @category="selectCategory" @retry="loadSettings" />
+        <ShortcutsReference v-if="page === 'shortcuts'" />
         <SiteFooter />
       </main>
     </div>
   </MotionConfig>
 </template>
+
+<style scoped>
+.product-page { max-width: none; }
+.reference-page { min-height: calc(100vh - 88px); }
+</style>

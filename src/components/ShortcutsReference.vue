@@ -39,7 +39,7 @@ onUnmounted(() => controller?.abort())
 
 <template>
   <section id="shortcuts" class="shortcuts-section" :aria-busy="loading">
-    <div class="section-heading"><div><div class="eyebrow">LESS REACHING. MORE MAKING.</div><h2>Find your shortcuts.</h2></div><span class="chapter-mark" aria-hidden="true">⌘ / 04</span></div>
+    <div class="section-heading"><div><div class="eyebrow">LESS REACHING. MORE MAKING.</div><h1 class="reference-title">Find your shortcuts.</h1></div><span class="chapter-mark" aria-hidden="true">⌘ / 04</span></div>
     <p class="section-intro">A key, an action, and the right moment to use it. Start with your system and the preset you use in Suhina.</p>
     <div class="shortcut-controls">
       <label>Operating system<select v-model="platform"><option v-for="(label, value) in platforms" :key="value" :value="value">{{ label }}</option></select></label>
@@ -75,6 +75,7 @@ onUnmounted(() => controller?.abort())
 </template>
 
 <style scoped>
+.reference-title { font-size: 34px; letter-spacing: -1.5px; font-weight: 500; line-height: 1.2; margin: 8px 0 0; }
 .shortcuts-section { padding: 42px 54px; border-bottom: 1px solid var(--line); background: #f1f0e9; scroll-margin-top: 15px; }
 .chapter-mark { font: 20px var(--mono); color: var(--muted); white-space: nowrap; }
 .shortcut-controls { display: grid; grid-template-columns: minmax(135px, 1fr) minmax(150px, 1fr) 1.5fr; gap: 20px; align-items: end; margin: 26px 0 22px; }

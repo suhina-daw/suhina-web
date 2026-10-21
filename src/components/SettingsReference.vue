@@ -7,7 +7,7 @@ import SettingEntry from './SettingEntry.vue'
 
 const props = defineProps<{ settings: Setting[]; loading: boolean; error: string; category: Category }>()
 const emit = defineEmits<{ category: [category: Category]; retry: [] }>()
-const query = ref('')
+const query = ref(new URLSearchParams(window.location.search).get('q')?.slice(0, 200) ?? '')
 const searchInput = ref<HTMLInputElement | null>(null)
 const reducedMotion = useReducedMotion()
 const matches = computed(() => filterSettings(props.settings, props.category, query.value))
@@ -20,7 +20,7 @@ defineExpose({ clearSearch, focusSearch })
 
 <template>
   <section class="settings-section" id="settings" :aria-busy="loading">
-    <div class="section-heading"><div><div class="eyebrow">SMALL CONTROLS. BIG DIFFERENCE.</div><h2>Meet your settings.</h2></div><span class="shortcut">Open in Suhina <kbd>Ctrl</kbd> + <kbd>,</kbd></span></div>
+    <div class="section-heading"><div><div class="eyebrow">SMALL CONTROLS. BIG DIFFERENCE.</div><h1 class="reference-title">Meet your settings.</h1></div><span class="shortcut">Open in Suhina <kbd>Ctrl</kbd> + <kbd>,</kbd></span></div>
     <p class="section-intro">You don't need to learn every option. Just find the one you need.</p>
     <label class="search-box"><span aria-hidden="true">⌕</span><input ref="searchInput" v-model="query" id="settings-search" type="search" placeholder="Try “buffer”, “backups”, or “piano roll”…" aria-label="Search settings" @keydown.esc="escapeSearch"><kbd>/</kbd></label>
     <div class="filter-bar" id="filters" aria-label="Filter settings by category">
@@ -43,5 +43,6 @@ defineExpose({ clearSearch, focusSearch })
 </template>
 
 <style scoped>
+.reference-title { font-size: 34px; letter-spacing: -1.5px; font-weight: 500; line-height: 1.2; margin: 8px 0 0; }
 .retry { background: transparent; border: 0; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 </style>

@@ -4,8 +4,8 @@ const base = import.meta.env.BASE_URL
 
 <template>
 <footer>
-  <a class="brand" href="#home"><img class="brand-logo" :src="`${base}assets/brand/suhina-logo.svg?v=3`" alt="Suhina" width="125" height="37"></a>
-  <p>A little noise. A world of possibilities.</p>
+  <a class="brand" :href="base"><img class="brand-logo" :src="`${base}assets/brand/suhina-logo.svg?v=3`" alt="Suhina" width="125" height="37"></a>
+  <p>A soft hiss. A free, open music workstation.</p>
   <div class="footer-links">
     <div><span class="link-heading">Help improve the guide</span><a href="https://github.com/suhina-daw/suhina-daw/issues" target="_blank" rel="noreferrer">Settings &amp; shortcuts ↗</a><a href="https://github.com/suhina-daw/suhina-web/issues" target="_blank" rel="noreferrer">Website feedback ↗</a></div>
     <details class="contribute"><summary>Contribute <span class="expand" aria-hidden="true">+</span></summary><div class="contribute-options">
