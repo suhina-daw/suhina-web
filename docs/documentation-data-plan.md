@@ -1,6 +1,6 @@
 # Versioned settings and shortcut documentation
 
-Status: settings export and main-only website synchronization implemented in separate companion branches/PRs; merge the native export first. Shortcut export remains proposed. Initial Pages/domain activation is separate.
+Status: settings export and main-only website synchronization are live on suhina.org. A native shortcut export and companion web reference are prepared for source review; merge the native proposal before publishing its content. Archived version selection remains future work.
 
 ## Ownership and source
 
@@ -72,3 +72,7 @@ Local user `keymap.json` import is a later feature. If implemented, parse it onl
 ## Repository and licensing preparation
 
 The website directory initially had no Git repository on 2026-10-21. Following the user's repository request, the existing private `suhina-daw/suhina-web` repository was verified in the browser and the local directory was initialized on `main` with that URL as `origin`. The user subsequently authorized the initial push. GPL-3.0-or-later metadata and ignore rules are prepared; website deployment remains a separate, unauthorized step. Exclude dependencies, `dist`, environment files, logs and QA screenshots. Preserve all third-party notices and font licenses independently of the website’s own license.
+
+## First shortcut directory
+
+The first implementation exports every default-bound and window action (78 in the checked main revision), including unbound window actions, using schemaVersion 1 and scope `default-and-window-actions`. Parameterless commands without defaults, mouse gestures, custom keymap import and archived app versions remain later work. OS/preset bindings are arrays of key tokens with an explicit empty array for unbound actions. Native coverage tests require descriptions, context, use cases, platform notes, valid references and current fingerprints. The web sync validates both catalogs before writing and preserves the existing main-only and deployment-retry rules. The richer immutable version manifest proposed above is not claimed to be implemented by this slice.
