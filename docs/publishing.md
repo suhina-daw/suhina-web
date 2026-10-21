@@ -6,7 +6,7 @@ The GitHub repository is public. GitHub Pages can host the static Vite build; no
 
 `.github/workflows/pages.yml` runs technical checks on pushes and pull requests: Node data-validation/search tests, Python exporter tests and the production build. It uploads only `dist` as a Pages artifact. It does not check out the DAW source or repeat a settings-content review. The native repository owns that review and the settings-coverage gate.
 
-Initial website publication is manual: run **Verify and publish website** from `main` and explicitly select **publish_reviewed_site** after release authorization. Ordinary code pushes and pull requests do not deploy in this initial setup.
+Every push to `main` automatically publishes after the verification job succeeds. Review website changes before merging them into `main`; AI-generated prose still requires human review. Pull requests run verification without deploying. To retry publication without another commit, run **Verify and publish website** from `main` with **publish_reviewed_site** selected. Manual runs on other branches cannot publish.
 
 **Follow DAW main settings** runs about every 30 minutes and can be dispatched manually on web `main`. Its source repository and `main` ref are fixed in the workflow; there is no branch input. The importer additionally verifies official origin and the fetched `origin/main` commit and reads the committed `docs/guide-data/settings.json` blob. It accepts schemaVersion 1, requires source-reviewed complete help and records provenance in `public/settings-source.json`. Missing, stale or invalid source data fails the run before any update is committed or published. No local checkout or unmerged UI setting is a fallback.
 
@@ -21,7 +21,7 @@ Settings prose must be approved in the native repository, alongside its implemen
 1. In repository Settings → Pages, select GitHub Actions as the build source.
 2. Verify ownership of `suhina.org` in the organization's Pages settings using the TXT record GitHub supplies. Its exact verification name and value come from GitHub and must not be guessed.
 3. Set the repository's custom domain to `suhina.org` before pointing its DNS to GitHub. A custom Actions deployment does not require a `CNAME` file in the repository.
-4. After content approval, manually dispatch the publishing workflow on `main`.
+4. Merge reviewed website changes into `main` to publish after successful verification, or manually dispatch on `main` with **publish_reviewed_site** selected to retry.
 5. Once DNS validation and certificate issuance succeed, enable Enforce HTTPS.
 
 ## Namecheap DNS
