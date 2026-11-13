@@ -38,8 +38,8 @@ ownership and main-only synchronization remain unchanged.
 
 ## Visual direction
 
-Preserve warm paper, Manrope, DM Mono, charcoal and yellow, with restrained olive/terracotta
-sound colors. The hero is asymmetrical; feature sections alternate spacious text and a visual
+Redesigned in November 2026: near-black or off-white, Host Grotesk, Geist Mono for keys and file names, one yellow accent line,
+numbered chapters with a narrow text column, and full-bleed dark media panels that stay dark in both themes. Feature sections alternate text and a visual
 explanation. Artcraft was a reference for hierarchy and product-first presentation, not copied
 for layout, logo treatment, orbiting media, type pairing or animation.
 
@@ -77,3 +77,25 @@ the build. Never commit that unmerged preview data to this web branch or deploy 
 Review the copy, desktop/mobile layout, the actual Arrangement screenshot and full-size link, sound-neighborhood
 controls, guide navigation, direct page refreshes, settings search, shortcut search and the
 Contribute disclosure. No deployment is part of this task.
+
+## November 2026 sections
+
+Added with the redesign and checked against DAW main on 2026-11-13; recheck before changing them:
+
+- Devices: the list is the devices marked done in the DAW's `ROADMAP.md` (Built-in effects and
+  instruments). The SDK sentence follows the DAW README's Contributing section.
+- Themes: the copy follows `ROADMAP.md` (What works now, the theme entries). The screenshots are
+  the DAW's `docs/design/reference/theme-*.png`, converted to WebP in `public/assets/product/`.
+  The `*-minimal-v3.png` files there are design mockups (see the DAW's `ATTRIBUTION.md`) and must
+  not be shown as the product.
+- Edit notes, automation and audio: each line follows an entry under "What works now" in the DAW's
+  `ROADMAP.md` (several projects in tabs, ADR 0007; take lanes and comping; the piano roll;
+  automation lanes; real-time time-stretching; follow actions) or the DAW README (updates,
+  `suhina-cli`).
+- Pictures and clips added on 2026-11-13 from captures the contributor supplied: the hero
+  (`suhina-project`), a community member's theme (`suhina-theme-glass`) and three silent video
+  loops (`clip-*.mp4`, cropped from screen recordings). They show third-party plug-in and sample
+  names from the projects that were open.
+- Progress: the chapter links to `suhina-daw/suhina-status`, where a bot redraws the status
+  figure daily, so no number is written here. The wall of screenshots beside it is decoration
+  made of the pictures above.

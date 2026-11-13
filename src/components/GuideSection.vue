@@ -1,20 +1,24 @@
 <script setup lang="ts">
-defineProps<{ count: number | null }>()
 const base = import.meta.env.BASE_URL
 </script>
 
 <template>
-<section class="guide-section" id="guide">
-  <div class="eyebrow">THE SUHINA FIELD GUIDE</div><h1>Start with a sound.</h1><p class="guide-intro">Connect your audio, learn the controls, and find the details when you need them.</p>
-  <div class="guide-grid">
-    <a class="guide-card" href="#first-sound"><span class="card-num">01 / GET STARTED</span><div class="card-icon">↗</div><h3>Your first sound</h3><p>Choose an output and get your audio setup ready.</p><span class="card-footer">THE ESSENTIALS <span>→</span></span></a>
-    <a class="guide-card" :href="`${base}settings/`"><span class="card-num">02 / LOOK IT UP</span><div class="card-icon sliders">≡</div><h3>Settings, explained.</h3><p>What each control changes, its options, and when to use it.</p><span class="card-footer">SETTINGS REFERENCE <span>→</span></span></a>
-    <a class="guide-card" :href="`${base}shortcuts/`"><span class="card-num">03 / LEARN THE KEYS</span><div class="card-icon">⌘</div><h3>Keyboard shortcuts</h3><p>Find an action, its keys, and the right context to use it.</p><span class="card-footer">SHORTCUT REFERENCE <span>→</span></span></a>
-  </div>
+<section class="page-section" id="guide">
+  <h1 class="page-title">Start with a sound.</h1>
+  <p class="section-intro">Connect your audio, learn the controls, and find the details when you need them.</p>
+  <ul class="guide-list">
+    <li><a href="#first-sound"><h2>Your first sound</h2><p>Choose an output and get your audio setup ready.</p></a></li>
+    <li><a :href="`${base}settings/`"><h2>Settings, explained.</h2><p>What each control changes, its options, and when to use it.</p></a></li>
+    <li><a :href="`${base}shortcuts/`"><h2>Keyboard shortcuts</h2><p>Find an action, its keys, and the right context to use it.</p></a></li>
+  </ul>
 </section>
 </template>
 
 <style scoped>
-h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.12; letter-spacing: -.06em; font-weight: 500; margin: 24px 0 18px; }
-.guide-intro { max-width: 480px; color: var(--muted); font-size: 13px; }
+.guide-list { margin: 0; padding: 0; list-style: none; }
+.guide-list a { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gutter); align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); }
+.guide-list li:last-child a { border-bottom: 1px solid var(--line); }
+.guide-list a:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.guide-list p { margin: 0; color: var(--olive); }
+@media (max-width: 720px) { .guide-list a { grid-template-columns: 1fr; gap: 6px; } }
 </style>
