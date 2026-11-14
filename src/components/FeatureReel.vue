@@ -3,7 +3,7 @@ import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 
 const base = `${import.meta.env.BASE_URL}assets/product/`
 const clips = [
-  { name: 'Piano roll', file: 'clip-piano-roll', caption: 'A chord clip in the piano roll: the scale highlighted, notes moved with the arrow keys.' },
+  { name: 'Piano roll', file: 'clip-piano-roll', caption: 'Chords in the piano roll: the scale shown and folded, note lengths changed, notes moved within a scale you pick.' },
   { name: 'Automation', file: 'clip-automation', caption: 'Automation lanes for a plug-in and the mixer, duplicated along the song.' },
   { name: 'Audio', file: 'clip-audio', caption: 'A gain envelope drawn on an audio clip, with curved segments.' },
 ]
