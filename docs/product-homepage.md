@@ -27,7 +27,10 @@ Checked official DAW main `5a8bb9a` (2026-10-21), without modifying the native a
   `crates/ui/src/browser/sample_map_panel.rs`: sound-based neighborhoods, cloud/grid and previews.
 - `docs/spec/ui-session-view.md`, `crates/ui/src/app.rs`: Session and Arrangement in one project.
 - `docs/decisions/0006-plug-in-hosting.md`, `crates/plugin-host/src/vst3.rs`,
-  `crates/plugin-host/src/clap.rs`: sandboxed CLAP/VST3 and transport context.
+  `crates/plugin-host/src/clap.rs`: sandboxed CLAP/VST3 and transport context. VST2 hosting
+  landed in suhina-daw#1073 (2026-11). `.flp` import is in progress (epic suhina-daw#271,
+  suhina-daw#1404) and DAWproject is planned next; the home page says so in the import note.
+  Update that note when either lands.
 - `docs/decisions/0028-ara-hosting.md`, `crates/plugin-host/src/ara.rs`,
   `crates/ui/src/app.rs::open_ara_editor`: existing experimental ARA clip editing. Do not claim
   that the wider pending multitrack/shared-document work is in main.

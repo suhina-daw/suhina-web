@@ -13,8 +13,8 @@ const base = import.meta.env.BASE_URL
 <template>
   <div class="product-home">
     <section id="home">
-      <figure class="stage hero-media">
-        <AppShot name="suhina-project" alt="A song of seventy tracks in Suhina's Arrangement: audio and MIDI clips in track colors along the timeline, with a clip's warp, gain and pitch controls below" sizes="(min-width: 1720px) 1600px, 100vw" :width="1919" :height="917" eager />
+      <figure class="hero-media">
+        <AppShot name="suhina-project" alt="A song of seventy tracks in Suhina's Arrangement: audio and MIDI clips in track colors along the timeline, with a clip's warp, gain and pitch controls below" sizes="100vw" :width="1919" :height="917" eager />
       </figure>
       <div class="hero-top">
         <h1>Make music<br>in the <span class="wave">open.<svg viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36C38 6 82 0 122 22c42 23 88 30 178 2-78 46-150 48-192 20C74 22 42 22 0 36Z"/></svg></span></h1>
@@ -65,11 +65,11 @@ const base = import.meta.env.BASE_URL
     </HomeChapter>
 
     <HomeChapter id="plug-ins" title="Bring your plug-ins along." ruled>
-      <p>Use CLAP and VST3 instruments and effects in a separate plug-in host. Supported plug-ins receive the song's tempo and playback position.</p><p class="note">Experimental ARA support lets compatible editors work with Arrangement audio clips. Compatibility and the wider ARA workflow are still being developed.</p>
+      <p>Use CLAP, VST3 and VST2 instruments and effects in a separate plug-in host. Supported plug-ins receive the song's tempo and playback position.</p><p class="note">Experimental ARA support lets compatible editors work with Arrangement audio clips. Compatibility and the wider ARA workflow are still being developed.</p>
     </HomeChapter>
 
     <HomeChapter id="import" title="A new place for an old project.">
-      <p>Open existing .als projects, bring in audio and MIDI, and save your work in Suhina's own project format.</p><p class="note">Project import is evolving. Not every imported device or feature is reproduced; try your material and tell us what needs work.</p>
+      <p>Open existing .als projects, bring in audio and MIDI, and save your work in Suhina's own project format.</p><p class="note">Import of .flp projects is under way, and DAWproject files come next. Project import is evolving. Not every imported device or feature is reproduced; try your material and tell us what needs work.</p>
     </HomeChapter>
 
     <HomeChapter id="progress" title="Built in public. Counted in public." ruled>
@@ -110,8 +110,8 @@ const base = import.meta.env.BASE_URL
 
 .command code { color: #ededea; }
 .command figcaption { margin-top: 12px; font-size: 14px; }
-.hero-media { padding-block: clamp(16px, 2.4vw, 40px) 0; }
-.hero-media img { width: min(100%, 1600px); max-height: 46vh; margin-inline: auto; object-fit: cover; object-position: top; }
+.hero-media { margin: 0; background: #000; }
+.hero-media img { width: 100%; max-height: 52vh; object-fit: cover; object-position: top; }
 .command code { display: block; font-size: clamp(18px, 3.2vw, 44px); letter-spacing: -.02em; overflow-wrap: anywhere; }
 
 .rows { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; }
