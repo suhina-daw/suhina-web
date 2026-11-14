@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { categoryList, commonPlatformNote, filterShortcuts, paragraphs, parseShortcuts, presets } from './shortcuts.ts'
+import { categoryList, commonPlatformNote, filterShortcuts, parseShortcuts, presets } from './shortcuts.ts'
+import { blocks } from './text.ts'
 
 export function shortcutFixture() {
   return { schemaVersion: 1, scope: 'default-and-window-actions', entries: [{
@@ -47,10 +48,11 @@ test('shortcut search combines key tokens, context and category for the chosen O
   assert.equal(filterShortcuts(entries, 'All', 'unbound', 'Select-first', 'windows').length, 0)
 })
 
-test('a description is split at blank lines and nowhere else', () => {
-  assert.deepEqual(paragraphs('Opens the palette. It lists plug-ins.\n\nUp and Down move;\nEnter adds it.\n \n'),
-    ['Opens the palette. It lists plug-ins.', 'Up and Down move; Enter adds it.'])
-  assert.deepEqual(paragraphs('One paragraph. Two sentences.'), ['One paragraph. Two sentences.'])
+test('a help text is split at blank lines, and a paragraph starting with ## is a heading', () => {
+  assert.deepEqual(blocks('## Keys\n\nUp and Down move;\nEnter adds it.\n \n## \n\nOne. Two.'), [
+    { heading: true, text: 'Keys' }, { heading: false, text: 'Up and Down move; Enter adds it.' }, { heading: false, text: 'One. Two.' }])
+  assert.deepEqual(blocks('One paragraph. Two sentences.'), [{ heading: false, text: 'One paragraph. Two sentences.' }])
+  assert.deepEqual(blocks('A line with ## inside'), [{ heading: false, text: 'A line with ## inside' }])
 })
 
 test('the platform note shared by most entries is the common one, and a note on a single entry is not', () => {

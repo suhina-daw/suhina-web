@@ -90,11 +90,6 @@ export function filterShortcuts(entries: Shortcut[], category: string, query: st
   })
 }
 
-/** A description's paragraphs: the help text separates them with a blank line. */
-export function paragraphs(text: string): string[] {
-  return text.split(/\n\s*\n/).map(part => part.replace(/\s+/g, ' ').trim()).filter(Boolean)
-}
-
 /** The platform note most entries share, which the page states once instead of on every row. */
 export function commonPlatformNote(entries: readonly Shortcut[]): string {
   const counts = new Map<string, number>()

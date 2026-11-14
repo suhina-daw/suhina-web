@@ -99,6 +99,7 @@ main { min-width: 0 }
 .setting[open] .setting-plus, .shortcut-entry[open] .entry-plus { transform: rotate(45deg) }
 .setting-body { animation: drop-in .18s }
 .setting-body, .shortcut-body { max-width: 40em; padding: 0 0 24px; color: var(--olive) }
+.help-heading { margin: 22px 0 6px; font-size: 1em; font-weight: 600; color: var(--ink) }
 .source-note { max-width: 44em; margin-top: 28px }
 .empty { padding: 36px 0; color: var(--muted) }
 .retry { padding: 0; border: 0; background: none; text-decoration: underline; text-underline-offset: 4px }

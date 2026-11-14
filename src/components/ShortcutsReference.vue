@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { categoryList, commonPlatformNote, filterShortcuts, paragraphs, parseShortcuts, platforms, presets } from '../data/shortcuts'
+import { categoryList, commonPlatformNote, filterShortcuts, parseShortcuts, platforms, presets } from '../data/shortcuts'
+import { blocks } from '../data/text'
 import type { Platform, Preset, Shortcut } from '../data/shortcuts'
 import { replacingPrerender } from '../prerendered'
 
@@ -62,7 +63,7 @@ onUnmounted(() => controller?.abort())
             <template v-for="(chord, index) in entry.bindings[preset][platform]" :key="index"><span v-if="index" class="or">or</span><span class="chord"><kbd v-for="(key, keyIndex) in chord" :key="keyIndex">{{ key }}</kbd></span></template>
             <span v-if="!entry.bindings[preset][platform].length" class="unbound">No default key</span>
           </span><span class="entry-plus" aria-hidden="true">+</span></summary>
-          <div class="shortcut-body"><p class="use">{{ entry.whenToUse }}</p><p v-for="(part, index) in paragraphs(entry.description)" :key="index">{{ part }}</p><dl><dt>Where it works</dt><dd>{{ entry.context }}</dd><template v-if="entry.platformNotes !== sharedNote"><dt>On your system</dt><dd>{{ entry.platformNotes }}</dd></template></dl></div>
+          <div class="shortcut-body"><p class="use">{{ entry.whenToUse }}</p><template v-for="(block, index) in blocks(entry.description)" :key="index"><h3 v-if="block.heading" class="help-heading">{{ block.text }}</h3><p v-else>{{ block.text }}</p></template><dl><dt>Where it works</dt><dd>{{ entry.context }}</dd><template v-if="entry.platformNotes !== sharedNote"><dt>On your system</dt><dd>{{ entry.platformNotes }}</dd></template></dl></div>
         </details>
         <p v-if="!matches.length" class="empty">No shortcut found. Try fewer words, another preset or a different category.</p>
       </template>

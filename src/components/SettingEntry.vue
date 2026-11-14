@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { pageLabel } from '../data/settings'
+import { blocks } from '../data/text'
 import type { Setting } from '../data/settings'
 
 defineProps<{ setting: Setting }>()
@@ -22,7 +23,7 @@ function toggle(event: Event) {
     </summary>
     <div v-if="open || prerendering" class="setting-body">
       <p>Find it in <strong>Options → Settings → {{ pageLabel(setting.page) }} → {{ setting.section }}</strong>.</p>
-      <p v-if="setting.description">{{ setting.description }}</p>
+      <template v-for="(block, index) in blocks(setting.description)" :key="index"><h3 v-if="block.heading" class="help-heading">{{ block.text }}</h3><p v-else>{{ block.text }}</p></template>
       <dl v-if="setting.options.length">
         <template v-for="option in setting.options" :key="option.name">
           <dt><strong>{{ option.name }}</strong></dt><dd>{{ option.description }}</dd>
