@@ -47,10 +47,10 @@ test('shortcut search combines key tokens, context and category for the chosen O
   assert.equal(filterShortcuts(entries, 'All', 'unbound', 'Select-first', 'windows').length, 0)
 })
 
-test('a description is split at sentence ends, not inside a sentence', () => {
-  assert.deepEqual(paragraphs('Opens the palette. Up and Down move; Enter adds it. (VST2, VST3) stays.'),
-    ['Opens the palette.', 'Up and Down move; Enter adds it.', '(VST2, VST3) stays.'])
-  assert.deepEqual(paragraphs('Snaps to 1.5 beats. Then stops.'), ['Snaps to 1.5 beats.', 'Then stops.'])
+test('a description is split at blank lines and nowhere else', () => {
+  assert.deepEqual(paragraphs('Opens the palette. It lists plug-ins.\n\nUp and Down move;\nEnter adds it.\n \n'),
+    ['Opens the palette. It lists plug-ins.', 'Up and Down move; Enter adds it.'])
+  assert.deepEqual(paragraphs('One paragraph. Two sentences.'), ['One paragraph. Two sentences.'])
 })
 
 test('the platform note shared by most entries is the common one, and a note on a single entry is not', () => {

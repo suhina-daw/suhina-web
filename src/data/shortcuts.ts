@@ -90,9 +90,9 @@ export function filterShortcuts(entries: Shortcut[], category: string, query: st
   })
 }
 
-/** A long description split into its sentences, so the page can set each as a paragraph of its own. */
+/** A description's paragraphs: the help text separates them with a blank line. */
 export function paragraphs(text: string): string[] {
-  return text.split(/(?<=[.!?])\s+(?=[A-Z(])/).map(part => part.trim()).filter(Boolean)
+  return text.split(/\n\s*\n/).map(part => part.replace(/\s+/g, ' ').trim()).filter(Boolean)
 }
 
 /** The platform note most entries share, which the page states once instead of on every row. */
