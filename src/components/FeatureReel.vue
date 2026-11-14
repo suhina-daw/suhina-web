@@ -5,7 +5,7 @@ const base = `${import.meta.env.BASE_URL}assets/product/`
 const clips = [
   { name: 'Piano roll', file: 'clip-piano-roll', caption: 'A MIDI clip in the piano roll, while it plays.' },
   { name: 'Automation', file: 'clip-automation', caption: 'Automation lanes for a plug-in and the mixer, duplicated along the song.' },
-  { name: 'Audio', file: 'clip-audio', caption: 'A gain envelope drawn on an audio clip.' },
+  { name: 'Audio', file: 'clip-audio', caption: 'A gain envelope drawn on an audio clip, with curved segments.' },
 ]
 const current = ref(0)
 const playing = ref(false)
@@ -64,7 +64,7 @@ onUnmounted(() => observer?.disconnect())
 <style scoped>
 .frame, figcaption { width: min(100%, 1120px); margin-inline: auto; }
 .frame { position: relative; aspect-ratio: 960 / 368; overflow: hidden; border: 1px solid #262626; background: #111; }
-video { display: block; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+video { display: block; width: 100%; height: 100%; object-fit: contain; cursor: pointer; }
 .progress { position: absolute; inset: auto 0 0; height: 2px; background: var(--accent); transform-origin: left; }
 figcaption { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 8px 32px; margin-top: clamp(14px, 1.6vw, 22px); font-size: 14px; }
 .play { min-width: 3.2em; padding: 6px 0; border: 0; background: transparent; color: #ededea; text-align: right; }
