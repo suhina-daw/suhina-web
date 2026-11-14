@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import AppShot from './AppShot.vue'
 
 const views = [
-  { name: 'Session', file: 'suhina-session', alt: 'Suhina Session view: a grid of colored clips for drums, bass, keys and vocals above a mixer with faders and level meters' },
-  { name: 'Arrangement', file: 'suhina-arrangement-dark', alt: 'Suhina Arrangement view of the same project: the clips laid out along a timeline beside the track headers' },
+  { name: 'Launcher', file: 'suhina-launcher', alt: 'Suhina Launcher: columns of MIDI and audio clips above a mixer whose tracks hold a plug-in synth, a compressor, EQs and multiband effects' },
+  { name: 'Arrangement', file: 'suhina-arrangement', alt: 'Suhina Arrangement: lead, bass and drum clips along a timeline, with grouped tracks of plug-in synths in the track headers on the right' },
 ]
 const current = ref(0)
 </script>
@@ -12,11 +12,11 @@ const current = ref(0)
 <template>
   <figure class="stage switch">
     <div class="frames">
-      <AppShot v-for="(view, index) in views" :key="view.file" :name="view.file" :alt="view.alt" :class="{ shown: index === current }" :aria-hidden="index !== current" />
+      <AppShot v-for="(view, index) in views" :key="view.file" :name="view.file" :alt="view.alt" :width="1920" :height="727" :class="{ shown: index === current }" :aria-hidden="index !== current" />
     </div>
     <figcaption>
       <span class="stage-tabs"><button v-for="(view, index) in views" :key="view.file" type="button" :aria-pressed="index === current" @click="current = index">{{ view.name }}</button></span>
-      <span>The same project in both views.</span>
+      <span>Launch clips in the Launcher, lay out the song in the Arrangement.</span>
     </figcaption>
   </figure>
 </template>

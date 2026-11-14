@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { categoryList, filterShortcuts, parseShortcuts, platforms, presets } from '../data/shortcuts'
+import { categoryList, commonPlatformNote, filterShortcuts, paragraphs, parseShortcuts, platforms, presets } from '../data/shortcuts'
 import type { Platform, Preset, Shortcut } from '../data/shortcuts'
 import { replacingPrerender } from '../prerendered'
 
@@ -14,6 +14,7 @@ const loading = ref(!props.initialEntries)
 const error = ref('')
 const matches = computed(() => filterShortcuts(entries.value, category.value, query.value, preset.value, platform.value))
 const categories = computed(() => categoryList(entries.value))
+const sharedNote = computed(() => commonPlatformNote(entries.value))
 let controller: AbortController | undefined
 function reset() { category.value = 'All'; query.value = '' }
 async function load() {
@@ -45,7 +46,7 @@ onUnmounted(() => controller?.abort())
     <div class="shortcut-controls">
       <label>Operating system<select v-model="platform"><option v-for="(label, value) in platforms" :key="value" :value="value">{{ label }}</option></select></label>
       <label>Keymap preset<select v-model="preset"><option v-for="value in presets" :key="value">{{ value }}</option></select></label>
-      <p>These are the preset defaults. Your own changes in <strong>Settings → Keys → Shortcuts</strong> take precedence.</p>
+      <p>These are the preset defaults. Your own changes in <strong>Settings → Keys → Shortcuts</strong> take precedence.{{ sharedNote ? ` ${sharedNote}` : '' }}</p>
     </div>
     <label class="search-box"><input v-model="query" type="search" aria-label="Search shortcuts" placeholder="Try “duplicate”, “Ctrl+B”, or “piano roll”…" @keydown.esc="query = ''"></label>
     <div class="filter-bar" aria-label="Filter shortcuts by category">
@@ -61,7 +62,7 @@ onUnmounted(() => controller?.abort())
             <template v-for="(chord, index) in entry.bindings[preset][platform]" :key="index"><span v-if="index" class="or">or</span><span class="chord"><kbd v-for="(key, keyIndex) in chord" :key="keyIndex">{{ key }}</kbd></span></template>
             <span v-if="!entry.bindings[preset][platform].length" class="unbound">No default key</span>
           </span><span class="entry-plus" aria-hidden="true">+</span></summary>
-          <div class="shortcut-body"><p>{{ entry.description }}</p><dl><dt>Where it works</dt><dd>{{ entry.context }}</dd><dt>When to use it</dt><dd>{{ entry.whenToUse }}</dd><dt>On your system</dt><dd>{{ entry.platformNotes }}</dd></dl></div>
+          <div class="shortcut-body"><p class="use">{{ entry.whenToUse }}</p><p v-for="(part, index) in paragraphs(entry.description)" :key="index">{{ part }}</p><dl><dt>Where it works</dt><dd>{{ entry.context }}</dd><template v-if="entry.platformNotes !== sharedNote"><dt>On your system</dt><dd>{{ entry.platformNotes }}</dd></template></dl></div>
         </details>
         <p v-if="!matches.length" class="empty">No shortcut found. Try fewer words, another preset or a different category.</p>
       </template>
@@ -85,6 +86,9 @@ onUnmounted(() => controller?.abort())
 .chord { display: inline-flex; gap: 3px; white-space: nowrap; }
 .or, .unbound { font-size: 14px; color: var(--muted); }
 .shortcut-body dl { display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 10px 20px; margin: 0; }
+.shortcut-body p { margin: 0 0 10px; }
+.shortcut-body .use { color: var(--ink); }
+.shortcut-body dl { margin-top: 18px; }
 dt { color: var(--muted); }
 dd { margin: 0; }
 .customize-notes { max-width: 44em; margin-top: 36px; color: var(--olive); }

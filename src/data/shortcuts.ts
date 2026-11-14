@@ -89,3 +89,18 @@ export function filterShortcuts(entries: Shortcut[], category: string, query: st
     return words.every(word => index.includes(word))
   })
 }
+
+/** A long description split into its sentences, so the page can set each as a paragraph of its own. */
+export function paragraphs(text: string): string[] {
+  return text.split(/(?<=[.!?])\s+(?=[A-Z(])/).map(part => part.trim()).filter(Boolean)
+}
+
+/** The platform note most entries share, which the page states once instead of on every row. */
+export function commonPlatformNote(entries: readonly Shortcut[]): string {
+  const counts = new Map<string, number>()
+  for (const entry of entries) counts.set(entry.platformNotes, (counts.get(entry.platformNotes) ?? 0) + 1)
+  let best = ''
+  let most = 1
+  for (const [note, count] of counts) if (count > most) { best = note; most = count }
+  return best
+}

@@ -26,7 +26,7 @@ const base = import.meta.env.BASE_URL
     </section>
 
     <HomeChapter id="song" title="Start with a loop. Decide where it goes.">
-      <p>Launch clips and scenes in Session. Shape audio and MIDI on the Arrangement timeline. Both are part of the same project.</p><p>A short idea can become a song without leaving the workstation.</p><p><a class="link" :href="`${base}shortcuts/`">Find the keys for it</a></p>
+      <p>Launch clips and scenes in the Launcher. Shape audio and MIDI on the Arrangement timeline. Both are part of the same project.</p><p>A short idea can become a song without leaving the workstation.</p><p><a class="link" :href="`${base}shortcuts/`">Find the keys for it</a></p>
     </HomeChapter>
     <ViewSwitch />
 

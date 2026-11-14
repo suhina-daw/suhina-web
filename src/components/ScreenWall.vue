@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const base = import.meta.env.BASE_URL
-const shots = ['suhina-theme-glass', 'suhina-session', 'suhina-theme-sheet', 'suhina-arrangement-dark', 'suhina-theme-blocks', 'suhina-mixer-horizontal', 'suhina-toolbar-editor', 'suhina-session-compact']
+const shots = ['suhina-theme-glass', 'suhina-launcher', 'suhina-theme-sheet', 'suhina-arrangement', 'suhina-theme-blocks', 'suhina-mixer-horizontal', 'suhina-toolbar-editor', 'suhina-session-compact']
 const rows = [0, 3, 6].map(start => Array.from({ length: 4 }, (_, index) => shots[(start + index) % shots.length]))
 </script>
 

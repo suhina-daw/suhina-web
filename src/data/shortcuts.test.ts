@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { categoryList, filterShortcuts, parseShortcuts, presets } from './shortcuts.ts'
+import { categoryList, commonPlatformNote, filterShortcuts, paragraphs, parseShortcuts, presets } from './shortcuts.ts'
 
 export function shortcutFixture() {
   return { schemaVersion: 1, scope: 'default-and-window-actions', entries: [{
@@ -45,4 +45,17 @@ test('shortcut search combines key tokens, context and category for the chosen O
   entries[0]!.bindings['Draw-first'].windows = []
   assert.equal(filterShortcuts(entries, 'All', 'unbound', 'Draw-first', 'windows').length, 1)
   assert.equal(filterShortcuts(entries, 'All', 'unbound', 'Select-first', 'windows').length, 0)
+})
+
+test('a description is split at sentence ends, not inside a sentence', () => {
+  assert.deepEqual(paragraphs('Opens the palette. Up and Down move; Enter adds it. (VST2, VST3) stays.'),
+    ['Opens the palette.', 'Up and Down move; Enter adds it.', '(VST2, VST3) stays.'])
+  assert.deepEqual(paragraphs('Snaps to 1.5 beats. Then stops.'), ['Snaps to 1.5 beats.', 'Then stops.'])
+})
+
+test('the platform note shared by most entries is the common one, and a note on a single entry is not', () => {
+  const entry = parseShortcuts(shortcutFixture())[0]!
+  const shared = { ...entry, platformNotes: 'Ctrl on Windows, Cmd on macOS.' }
+  assert.equal(commonPlatformNote([shared, { ...shared, id: 'b' }, { ...entry, id: 'c' }]), 'Ctrl on Windows, Cmd on macOS.')
+  assert.equal(commonPlatformNote([entry]), '')
 })
