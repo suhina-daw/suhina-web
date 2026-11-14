@@ -8,7 +8,7 @@ const slides = [
   { file: 'suhina-theme-blocks', title: 'Suhina Blocks', alt: 'Suhina Session in the brown, pixel-textured Suhina Blocks theme' },
   { file: 'suhina-mixer-horizontal', title: 'A horizontal mixer', alt: 'Suhina Session in a dark theme whose mixer has horizontal faders and level meters' },
   { file: 'suhina-session-compact', title: 'A compact Session', alt: 'Suhina Session in a dark theme with a compact mixer of pan dials and short faders' },
-  { file: 'suhina-interface-editor', title: 'Editing the interface', alt: 'Suhina with the Edit interface panel open and every movable element outlined on a snap grid' },
+  { file: 'suhina-toolbar-editor', title: 'Editing the toolbar', alt: 'Suhina with the Edit toolbar panel open and the toolbar controls outlined for dragging on a snap grid', width: 1920, height: 1032 },
 ]
 const track = ref<HTMLElement | null>(null)
 const current = ref(0)

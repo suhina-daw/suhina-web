@@ -31,7 +31,7 @@ const base = import.meta.env.BASE_URL
     <ViewSwitch />
 
     <HomeChapter id="themes" title="The open-source DAW you can restyle with CSS." ruled>
-      <p>Suhina's look is a theme, written in CSS with SVG and PNG artwork. Choose a built-in theme, change its settings, move the interface around, or write your own.</p><p>Export a theme as one .theme.suhina file to share it.</p><p><a class="link" :href="`${base}settings/?category=Themes`">Explore theme settings</a></p>
+      <p>Suhina's look is a theme, written in CSS with SVG and PNG artwork. Choose a built-in theme, change its settings, rearrange the toolbar, or write your own.</p><p>Export a theme as one .theme.suhina file to share it.</p><p><a class="link" :href="`${base}settings/?category=Themes`">Explore theme settings</a></p>
     </HomeChapter>
     <ThemeGallery />
 
