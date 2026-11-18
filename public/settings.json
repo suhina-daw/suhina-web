@@ -516,6 +516,31 @@
     "workInProgress": false
   },
   {
+    "id": "Devices/Instruments/implicit_tones",
+    "page": "Devices",
+    "section": "Instruments",
+    "name": "Tone without instrument",
+    "note": "Let a MIDI track with no instrument play its notes as a plain sine tone.",
+    "keys": [
+      "implicit_tones"
+    ],
+    "sourceFingerprint": "fa89eadf8efc7a0431f8ab75ad3469fba2053171f89c4ba9c154e208c4c10662",
+    "helpStatus": "reviewed",
+    "description": "When this is on, a MIDI track that has no instrument (no devices, or only MIDI effects and audio effects) plays its notes as a plain sine tone, so you can hear what the notes are before you choose a sound. When it is off, such a track is silent until you add an instrument.\n\nAn instrument that is switched off or not installed never falls back to the tone, whichever way this is set: the track stays silent and keeps the instrument, its settings and its notes. Previewing a MIDI file in the browser plays it with its own preview sound either way. The setting applies to playback, clip launching, notes from a MIDI keyboard and exports, at once, in every open project. It is off unless you turn it on.",
+    "options": [
+      {
+        "name": "On",
+        "description": "A MIDI track with no instrument plays its notes as a plain sine tone."
+      },
+      {
+        "name": "Off",
+        "description": "A MIDI track sounds only through an instrument; without one it is silent."
+      }
+    ],
+    "whenToChange": "Turn it on to hear the notes of tracks that have no instrument yet, for example while sketching or checking an imported MIDI part. Leave it off so a track never plays a sound you did not choose.",
+    "workInProgress": false
+  },
+  {
     "id": "Devices/Device panels/device_chain",
     "page": "Devices",
     "section": "Device panels",
@@ -2579,13 +2604,13 @@
     "page": "Appearance",
     "section": "Background",
     "name": "Background image",
-    "note": "A picture of your own, a PNG file, drawn behind the window's panels",
+    "note": "A picture of your own, a PNG, JPEG or WebP file, drawn behind the window's panels",
     "keys": [
       "background_image"
     ],
-    "sourceFingerprint": "cb84cfb0b6841953122680abcc34e5bfdcaf253ed403faad61c6acf20f748718",
+    "sourceFingerprint": "e46c660e4f0fee56d819e8b04222eb9ae4b33b82d38e4f2cfb49c15634e97976",
     "helpStatus": "reviewed",
-    "description": "Choose a user-owned PNG or type its path. Clear the field to remove it and restore desktop transparency where the GPU host supports it.\n\nWhile displayed, surfaces blend over the image even on transparent hosts. The image is drawn over an opaque fill, so the desktop does not show through it, and nothing is captured from the screen.\n\nImages are decoded away from the UI thread, limited to 32 MiB and 8192 pixels per axis, and displayed at up to 1600 pixels per axis. High Contrast suppresses the image. If loading fails, repair the PNG and choose it again with Browse to retry; failures are not retried continuously.",
+    "description": "Choose a user-owned PNG, JPEG or WebP picture or type its path. Clear the field to remove it and restore desktop transparency where the GPU host supports it.\n\nWhile displayed, surfaces blend over the image even on transparent hosts. The image is drawn over an opaque fill, so the desktop does not show through it, and nothing is captured from the screen.\n\nImages are decoded away from the UI thread, limited to 32 MiB and 8192 pixels per axis, and displayed at up to 1600 pixels per axis. High Contrast suppresses the image. If loading fails, repair the picture and choose it again with Browse to retry; failures are not retried continuously.",
     "options": [],
     "whenToChange": "Choose an image when you want a private decorative backdrop behind neutral panels.",
     "workInProgress": false
