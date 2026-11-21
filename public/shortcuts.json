@@ -10,7 +10,7 @@
       "context": "Select one or more track headers first. Text fields and the piano roll keep their own keyboard focus. If an older keymap already assigns F2 to another window action, that binding is preserved and the colour window starts unbound; use + More colours in the track menu or assign a shortcut in Settings.",
       "whenToUse": "Colour related tracks together or reuse a colour while arranging the project.",
       "platformNotes": "F2 is the default on Windows, Linux and macOS. Some keyboards require Fn with F2 to send the function key.",
-      "sourceFingerprint": "a3927242a21c7e5c4b81cdd0d0499c58ba03317d0e86a11c3bed22b158d1f448",
+      "sourceFingerprint": "da867bf0d071da4c548d08d9eab631e8dba2df33b88191e84d7dbaf6a9682670",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -74,7 +74,7 @@
       "context": "Available without an open project.",
       "whenToUse": "Start another idea without closing the application.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d43b8aea6d163d1dc31ce0f459a5314066b1108f78f40afee850fb70b3455e0c",
+      "sourceFingerprint": "70821727d1a60ea6ce40ea410805b75283592d059acba2af4ddd4035df0c407b",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -147,7 +147,7 @@
       "context": "Available without an open project; opening behavior also depends on the General project-opening setting.",
       "whenToUse": "Return to a saved project.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "ca52b51bc618d62cd955dbb52923d5e2a5af750f2414b9ba51bc7fc133f2a8c1",
+      "sourceFingerprint": "b0f9083c3c5e5df3b224a70415caf724f9105e6e3ac45a436bfc10285e5eaea3",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -220,7 +220,7 @@
       "context": "Requires an open project.",
       "whenToUse": "Keep the edits you have just made.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "2ea1a5ed20b7738d7a0f74092bb4fcc68fe53720f9a43f474e4fc8b704bdb91e",
+      "sourceFingerprint": "0cb1ed03cdb35138121deab9806eaaa158faaf3f0af1f191b909a1d3c94562bc",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -293,7 +293,7 @@
       "context": "Requires an open project.",
       "whenToUse": "Keep a separate version before trying a different arrangement.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "93b6915c8a37e68fb0afc2f2cba16c039a37a5c13a65f891d410ba1434aa1ded",
+      "sourceFingerprint": "8ba7d03488fdeb8691a23656ef8af27e0ad5f8ae5f2224ad57e279fe4102616b",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -375,7 +375,7 @@
       "context": "Requires an open project. No key is assigned by default; bind one in Settings → Shortcuts.",
       "whenToUse": "Reuse your track and device setup in another project.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "5c01466ba463bd982050b6213f41b8345e101fc848161b2fb70b979b62aef2de",
+      "sourceFingerprint": "991f49632a6134fb56c722e6738aa091e652a93eaef7dbe1c2968aefe1331a97",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -403,7 +403,7 @@
       "context": "Requires an open project; the playhead is the position moving through the song.",
       "whenToUse": "Listen to an edit, then stop without reaching for the transport controls.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "5b9c424b9b4b6b250e04197518d993276893a236e5a4089ea9f839430904d324",
+      "sourceFingerprint": "65b314552a4c738be390f4d69c95db173ac1590149bd7428b7f604f0fcad6a22",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -467,7 +467,7 @@
       "context": "Available whenever a project is open; the notes go to the armed tracks.",
       "whenToUse": "Play or record notes without a MIDI keyboard.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "67257cdc36c004adf2e400542abceabe184d722e73fb5954fedfb632ff4f3067",
+      "sourceFingerprint": "e4ae293662f3b0dd776981b1e931a6be22a3da3c3dc1fd9736cb8ad336bed492",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -540,7 +540,7 @@
       "context": "Available whenever a project is open; at least one track must be armed, or the status bar says so.",
       "whenToUse": "Start and stop an arrangement recording without reaching for the mouse.",
       "platformNotes": "Windows and Linux use F9 as it is; on macOS the function keys may need Fn, depending on the keyboard settings.",
-      "sourceFingerprint": "8e25abe6044f5daeebdacd942895a5db29a1ec1953cc2755b9b87fcc796230f3",
+      "sourceFingerprint": "09dbba6a7919df5b6e2ae0a05ec2b2551be27d171eb951a20d932e34804168c5",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -604,7 +604,7 @@
       "context": "Needs a selected MIDI or audio track; a return, group or main track is left as it is. It has no default key: give it one in Settings › Keys.",
       "whenToUse": "Choose which tracks record from the keyboard, then start recording with the record key.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "60f06eb7428b8d89cb3411041733f77e224bc4f078d0e058ada4aa397ce27986",
+      "sourceFingerprint": "01c382bd22665f07be0c9d5eec25bb6b94d82b776481bd00d881e3c3b6056873",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -632,7 +632,7 @@
       "context": "Requires an open project; text fields keep Tab while they accept keyboard input.",
       "whenToUse": "Move between launching clips and editing the song timeline.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "b023e81684290f1f1c32aebb9d230794f64915903064bbd3b15b40a6cc96c461",
+      "sourceFingerprint": "35bfc69ae5ae1468c42a5841cd641cf92a581712eba816ed2016f0bd72b39933",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -696,7 +696,7 @@
       "context": "Requires an open project. No key is assigned by default; bind one in Settings → Shortcuts.",
       "whenToUse": "Go directly to the clip grid instead of toggling views.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "ba01589e9137f3f49a17e2b5daf2d15166a05c0bcd986190e953948ba1990e24",
+      "sourceFingerprint": "45fcece008f77cf7493e7eb029b6cec88f05c58eeca23ed7df8b52c63ab49ec1",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -724,7 +724,7 @@
       "context": "Requires an open project. No key is assigned by default; bind one in Settings → Shortcuts.",
       "whenToUse": "Go directly to the timeline from another main view.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "55ebc1ff4d0f48064b80f9cdb692f7fd6af6282850c3f328ae978e8845aeab39",
+      "sourceFingerprint": "c230e6dea02be84b4ca4bf7ee26114e96ad17cf749ae774220aea95112b319e1",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -752,7 +752,7 @@
       "context": "Available without an open project; key capture and text editing can temporarily keep the keyboard.",
       "whenToUse": "Change your audio device or find a preference.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "3b93483a72647d4ad70965f003a1744fd153a694250452ad968ad315769bf0cb",
+      "sourceFingerprint": "ce5342ce45b57db5c9fcb1f26de1f15aaf98ea7ee17a989dcd44fff333d8192e",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -825,7 +825,7 @@
       "context": "Requires an open project.",
       "whenToUse": "Make more room for the main view, then bring the detail area back.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "b0710c7a6050fe808236edb21cd4cc980e686a8608440ef7774d5cf0433705cb",
+      "sourceFingerprint": "e7b4f1374c70aa603b06dcb912d369bb8861cd8020c852750b5bf592e7609993",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -898,7 +898,7 @@
       "context": "Requires an open project with a shown clip; without one this action does nothing.",
       "whenToUse": "Temporarily hide the clip editor while keeping the main view visible.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "8fed788308a7e99428a9af18575bd81def2f3d884a21e6de5607de92b61124ac",
+      "sourceFingerprint": "4c1c7e870fc95bf21906e3dbd808b212c4722bb336d7908694a23eae0aeb7f7c",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -980,7 +980,7 @@
       "context": "Requires an open project. In mapping mode Delete removes an assignment and Escape leaves mapping mode.",
       "whenToUse": "Assign a convenient key to a frequently launched clip or scene.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "5dcd5a3761c83a6a81573f333558eff71ed82e28bedeff613610573ac03dc235",
+      "sourceFingerprint": "c5c82e4385ada3472c80867f5bca05a1bf3c7b4adbc6e426f282e51a588b05ed",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1053,7 +1053,7 @@
       "context": "Draw-first changes this binding to Ctrl+Shift+B on Windows/Linux or Cmd+Shift+B on macOS, leaving Ctrl/Cmd+B for Duplicate.",
       "whenToUse": "Make room for editing, then reopen the browser to find a sound.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "0c4a6bfd132214e9e628f04b7f7431523f0bd5feb9495a452f2faf4959b1123f",
+      "sourceFingerprint": "3161e5e39db8dabe9d14cc21f0d97e277206f93491d7fb8c8e020646fbed4f16",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1129,7 +1129,7 @@
       "context": "Available without an open project. It closes Settings and replaces the current search when you type.",
       "whenToUse": "Find a sample across the library without first choosing a browser category.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "4168dfd87bbef2a267d1892dfa16692cea31b1b40b4bfa1a7c7292cbde2b6ef3",
+      "sourceFingerprint": "13762018dcc180b22b89004cc21bda4486f0cac970c9b1873dc1fd73d374a4c1",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1202,7 +1202,7 @@
       "context": "Needs an open project. The header above the field names the target track (or New track) and the bar where a sample would start. On a track that plays no notes, such as an audio track, instruments and MIDI effects are not listed.",
       "whenToUse": "Add an effect, an instrument or a sample you know by name without opening the browser, finding it and dragging it.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "29675ac659ed5b213a3a9ccaef8ad7156c41284e51816b86df0dcca9728dcdff",
+      "sourceFingerprint": "0fe97e1eb80ffe751a14ce25285c40152df39e671d9a7d7984d8a55c122d1efd",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1275,7 +1275,7 @@
       "context": "Available without an open project; opening it closes Settings.",
       "whenToUse": "Explore samples visually instead of searching by file name.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e5db8a15038c2a356deabaef13e814a86edeaa1fff6793eca8aea9b512c1ed82",
+      "sourceFingerprint": "2f977acba2ee0840c9a7c918a0061b7dcab80255dca42dfa14870456b82ccbcb",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1366,7 +1366,7 @@
       "context": "Available without an open project.",
       "whenToUse": "Keep the sample map available while working in the main song view.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d7f31ac6761f3c27d477431a8691fa921e0ee51c4a2ac83e5f5528c8c2a2da0e",
+      "sourceFingerprint": "97e031eba7f384dda7a6755a64e004654872520ef5b455c5f5db13933a5af002",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1448,7 +1448,7 @@
       "context": "Available without an open project. On macOS use Cmd+=; the alternate Ctrl+Plus binding is not delivered as Plus while Cmd is held.",
       "whenToUse": "Make controls easier to read on a high-resolution display.",
       "platformNotes": "On macOS use Cmd+=. Cmd+Plus is not emitted as Plus by the window. Windows and Linux also accept Ctrl+Plus as well as Ctrl+=.",
-      "sourceFingerprint": "332a9ec018dabe67094a713925708801f86f2dd15a250bd186a014067b94a78a",
+      "sourceFingerprint": "847b47dafbce6a9e87aef926b5ce8400a06c1ff005ae0b0ca2014b5654803ddf",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1545,7 +1545,7 @@
       "context": "Available without an open project; the zoom choice is saved in Settings.",
       "whenToUse": "Fit more interface content on a smaller screen.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "73322bd007c5a577ff48002b0cec20f65b3f678638c0e3cc2c98953a22054963",
+      "sourceFingerprint": "d002bf00b95ba702035faf1e7ee03e39bed8eb609a0245497ded7c4bb5add041",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1618,7 +1618,7 @@
       "context": "Available without an open project.",
       "whenToUse": "Return to the normal interface size after experimenting with zoom.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "726de1480d006d3577dc1525bed156f23377d995fc576169e2948d3b2c354cc4",
+      "sourceFingerprint": "33b64d87624a78ef203c76f242a2054e6cffc2c723afdaa6164008db39060657",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1691,7 +1691,7 @@
       "context": "Available without an open project, but the visible effect is on Arrangement audio clips. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Inspect a quiet recording's waveform without turning up its sound.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "79aadaac69c327366a57bb37cfd0a852b6ef763ba63e21bebd2b553c1f0ecc3e",
+      "sourceFingerprint": "50c540757e73bb25ac1f26c134a29d71bb4d0866455486820bd2e226a5d2873d",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1773,7 +1773,7 @@
       "context": "Visible on audio clips in Arrangement; this changes the drawing, not the recorded samples. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Undo waveform magnification after inspecting a quiet passage.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "f0f8a5f33326b53d08973c5284acb9fb5e6c7d9de3253f174b48bf149f3bcbdb",
+      "sourceFingerprint": "414baa7ffb4d70e57709c1278c15e066b02859f94d2f01f7874299968a91e678",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1855,7 +1855,7 @@
       "context": "Click the intended editor or device panel first. If the piano roll cannot act on notes, copying may fall through to a clip selection.",
       "whenToUse": "Reuse a phrase, clip or device setup elsewhere.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same. System clipboard events, including Windows Ctrl+Insert, Shift+Delete and Shift+Insert when delivered by the window, are normalized to Copy, Cut and Paste.",
-      "sourceFingerprint": "cc29a295c2db005ae26442f648d2bcbd3573a10ca9ec6ca0edb2f63cd1ab89a8",
+      "sourceFingerprint": "a834c001fca4a8f029c2bef7bf58c4c76ccbad92c6e988df6dbad3c5644cf193",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -1928,7 +1928,7 @@
       "context": "Click the intended editor or device panel first. Cutting a Launcher slot's clip is not supported; copy and paste it instead.",
       "whenToUse": "Move a passage or device rather than leave a second copy.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same. System clipboard events, including Windows Ctrl+Insert, Shift+Delete and Shift+Insert when delivered by the window, are normalized to Copy, Cut and Paste.",
-      "sourceFingerprint": "2088f3644f8a72d427f6cfdb5002a633a7ab96825f4783d05154910dfa92f8eb",
+      "sourceFingerprint": "9ffd5e634c98d51038038fad0371c3af670d3c9241c6fbd13aebaad3233dbf02",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2001,7 +2001,7 @@
       "context": "Requires copied material and a suitable target. Arrangement overlap follows audio/MIDI stacking settings. Suhina also puts text on the system clipboard because the window delivers Paste only for text clipboard content.",
       "whenToUse": "Place copied material at a chosen clip slot, track, note position or device position.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same. System clipboard events, including Windows Ctrl+Insert, Shift+Delete and Shift+Insert when delivered by the window, are normalized to Copy, Cut and Paste.",
-      "sourceFingerprint": "52aa5f51f510bbd10275ffeb27f0c982aefe6bcf125c3c52894d6bd6c1c4bcc7",
+      "sourceFingerprint": "d2cc9ae3052d89fbf9cca9cdffd7a84b456ba542546a8d77cf2b90adf887c9eb",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2074,7 +2074,7 @@
       "context": "Click the intended editor or device panel first. Launcher slot duplication is not supported. Arrangement overlaps follow stacking settings. Draw-first uses Ctrl/Cmd+B instead of Ctrl/Cmd+D.",
       "whenToUse": "Repeat a musical phrase or an effects chain without a separate paste step.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "1c0b5a7454ff5c1bf41ef1da3f7e7ab7d38d9bb8252cc3fa6051bbc6b8d6c84a",
+      "sourceFingerprint": "640b3c29f5cc4a254b8849951f82b2e036cc1fedfe2910bbf3b1a5c5a4d7c13c",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2147,7 +2147,7 @@
       "context": "Click the intended area first: the focused panel and selection decide what is removed.",
       "whenToUse": "Remove selected notes or an unwanted passage after confirming the correct area is focused.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "6625be3b4d7d43c9063aec6eec2a725d73f1aa28586695efd03c563b11df9bb7",
+      "sourceFingerprint": "a6131b2ebed83ab82c42448b51847390b8a2d7ff6c213f01c4652c81b39e820c",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2238,7 +2238,7 @@
       "context": "The clip action uses the Arrangement clip selection. It is separate from the piano roll's Mute tool.",
       "whenToUse": "Compare the song with and without a clip or selected device.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "3109eb72a42a7e5229de27189468516a44fc743b9f2cb91ea56ba71a95ac801d",
+      "sourceFingerprint": "83bb34e7bea670dc0488697132902994f9bd31d47642e9ddb6b2d242719ceaef",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2302,7 +2302,7 @@
       "context": "Click the track header or clip to choose the target; an empty Launcher slot has no clip to rename.",
       "whenToUse": "Give tracks and clips meaningful names before the project grows.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "f3a0ace7a8706573fb135c81bb8d1097f4e4926786daeefd74dfe2ba9421307a",
+      "sourceFingerprint": "da33edc7869e87d67d210b9e6060275e0709e2161f58589b6d04f018c1da687e",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2375,7 +2375,7 @@
       "context": "Requires an open project. With piano-roll focus the same key selects notes instead.",
       "whenToUse": "Select the Arrangement's clips before moving or copying them together.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "10df2721e1c55eff4f5867363e7f174843bff91ad6fa11a87bc798752aa0e33a",
+      "sourceFingerprint": "66c622988738249ce74f588bd5a385c900af25c0f283263322b81847662914c3",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2448,7 +2448,7 @@
       "context": "Requires Arrangement material; click inside the clip where it should be split, or make a time selection first.",
       "whenToUse": "Separate a passage so you can edit or remove it independently.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e9a39372f4258c23616fbd40a6f0298d2016ce4d6b8c558841a046795dc88e57",
+      "sourceFingerprint": "db04f8276a6761d60d5f6e811aa65019c0363c4563c48214cb2be4ae59a674d5",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2521,7 +2521,7 @@
       "context": "Requires Arrangement clips or a time selection with material. A selected stack row limits the time selection to that row.",
       "whenToUse": "Turn several small edits into a single clip over a chosen passage.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "a9469812119886aa1b410a464032639b064c77a61d5eb6c0fbf30c5887202a8a",
+      "sourceFingerprint": "8e8af575f31ea47101acdaa164db70682a2cb3762858c4b87ba1abca1ca8755d",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2594,7 +2594,7 @@
       "context": "Device picks must sit next to each other on the same track. Without selected tracks or devices there is nothing to group. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Organize related tracks or package a sequence of devices together.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "5bf4104bacdbf738ca1725a44e4e7539232436d44429a6c953e8bbc4e0a2c0de",
+      "sourceFingerprint": "cfbc69fe0c333042726da16cf82446c8d37e26185dff7d841cb06ea854f4c003",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2667,7 +2667,7 @@
       "context": "Click the device group first; this shortcut does not ungroup tracks. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Return a simple device group to individual devices in the chain.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "0c489f4d25745ed34f6d23f7c7dc432765aa8fe022e52d096c4b77bbc2e6795c",
+      "sourceFingerprint": "6442823fbad53f9c11efecc8890e4a44d2cddfed6883b9cfe3cfa73c3810f133",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2749,7 +2749,7 @@
       "context": "Requires an open project; the selected track determines the insertion position.",
       "whenToUse": "Add a lane for a recording or imported audio.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d7961e25eb5eaa48e294e1385647a127e1b081382b3f51914fe567ce434ab444",
+      "sourceFingerprint": "16ee09de435e03020350f66ea83338f24fdd92c9f5da4ed4ea18f838708fb5ef",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2822,7 +2822,7 @@
       "context": "Requires an open project; MIDI notes describe what to play rather than containing recorded sound.",
       "whenToUse": "Create another instrument part.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "92e587408f245d86109aec3c300b9b08a86c1fd7d68be8b7db8d4df959802fdd",
+      "sourceFingerprint": "d386cac44141db56c2912b9b6c7978c6a0f3ef2be76281e0ccd45eb927a0da71",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2904,7 +2904,7 @@
       "context": "Make a time selection that includes a MIDI track first. Audio tracks in the selection do not receive MIDI clips. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Prepare a blank note clip exactly over the passage you want to write.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "3890c4a401a03e85ec7a45cbf7d25f533261be9eec7c4053a67879705833029d",
+      "sourceFingerprint": "c6724279a15b9df50d20e27abd288b0a5fa8639e2f1327e1c76ca4f47581d0cf",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -2986,7 +2986,7 @@
       "context": "Requires an open project with an Arrangement timeline. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Reveal volume or device-parameter changes while editing the song.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e483c73361d6c5eeb399d02ba5c36869b778e08f5789f049e60264e57d8b0fcd",
+      "sourceFingerprint": "e890606d73a2064d82b6925e975a897216577119886d37be36b0e80a9d03e3f8",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3050,7 +3050,7 @@
       "context": "Requires an audio clip selected in the Arrangement. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Ride a clip's level over time without automation, such as taming one loud word.",
       "platformNotes": "Windows and Linux use Alt. On macOS it is Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "65262311e1254ea47c458a7c4a053d0fe22aa160e209d5db9672e068896f4902",
+      "sourceFingerprint": "f3036f6a4faff09c64d56d45b586d00129a9c5a24e941ffb21a52846b5f18460",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3123,7 +3123,7 @@
       "context": "Requires the Launcher and a selected clip slot. Piano-roll focus keeps its keys separate from slot navigation.",
       "whenToUse": "Start the slot selected with the arrow keys.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d71d7cbc096070b5aa3e7ec295e2edd645db17ac022633675074d4ebbbbc6690",
+      "sourceFingerprint": "eb9c330fbdb71e6c1696961d16072277930e69dfc066c912ef0fd55fa9997925",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3187,7 +3187,7 @@
       "context": "Click a Launcher slot first; with piano-roll focus Up moves selected notes instead.",
       "whenToUse": "Navigate vertically through clip choices without launching them.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "a44439c73ddfa2cd8e15c35e63c19a7e6319b78143f8a4a7fd6a8bf7354452a7",
+      "sourceFingerprint": "8060af1dbda2a3b9f978161bac70c74b8f708884eba4cdddc3f4c68295e0fc10",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3251,7 +3251,7 @@
       "context": "Click a Launcher slot first; with piano-roll focus Down moves selected notes instead.",
       "whenToUse": "Move to the next Launcher row before launching its clip.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "95db49a6dbceff529b0ff8285b397508485078b708275cd2db61634a1594b4ea",
+      "sourceFingerprint": "de90669c8b6e3f8c4fcf615501ad9b3c7a1c37a87d04cbe8088470a3750f3ea4",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3315,7 +3315,7 @@
       "context": "Click a Launcher slot first; with piano-roll focus Left moves selected notes instead.",
       "whenToUse": "Choose a slot on the neighboring track.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "c580db361e07773ef909ffc98e63fedaef4d208631bb6e62c73efed68f7e0ed4",
+      "sourceFingerprint": "bf67a7bb7fa26f8beed3c86288649c45b4d28bf4dfafc5623f65093a107bd2a4",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3379,7 +3379,7 @@
       "context": "Click a Launcher slot first; with piano-roll focus Right moves selected notes instead.",
       "whenToUse": "Move across the Launcher grid to another track.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e82af03d2e0ef58e3d688ca863e3477f612d1e11520880448b36979d088e15ec",
+      "sourceFingerprint": "5fd0e15a66d25834945e73be82d4bb9de57ea9df543940dd09a42ade790bc55f",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3443,7 +3443,7 @@
       "context": "The detail area must show a MIDI clip in the piano roll. Unlike the other piano-roll keys, a click to focus that editor is not required.",
       "whenToUse": "Tighten a recorded phrase using the quantise settings you last chose.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "c58f5cb03ca23e916841018b899369e2dc9d929153a44a0cfd0e66d985123b85",
+      "sourceFingerprint": "11cf576cee64c283d1f0ca43b7b549943ffc6cccc9988cbb8b9d874205e89f7d",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3516,7 +3516,7 @@
       "context": "Click the piano-roll note grid first. The same key outside that editor selects Arrangement clips.",
       "whenToUse": "Transpose or copy a whole note phrase.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "b9e850f348276ca6b3d09fe3dc032ce86f132421e8ecd5b9a6131ecd8231fbe4",
+      "sourceFingerprint": "b73359d3aa2b43691518358660a4a5d61db8b0d40379ccd086b985afa366a2ed",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3589,7 +3589,7 @@
       "context": "Click the piano-roll note grid first; Escape has other uses elsewhere.",
       "whenToUse": "Clear a note selection before drawing or selecting another phrase.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "99e8732ed41c9473eb134f0a1eded597b96325c56076923c521de7739394baa8",
+      "sourceFingerprint": "61716aa0a839f2d85651de44ef26a197cf9fa0c55805c5eb686cfd7c2247e7e4",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3653,7 +3653,7 @@
       "context": "Click the piano roll and select notes first. Movement near the clip start is constrained so notes do not move before the start.",
       "whenToUse": "Shift a phrase earlier while keeping its rhythm together.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d307c2531b55121acc9da9c6c09331cc4d82fba272a174f02a941c9ba3db5d31",
+      "sourceFingerprint": "a93605b2ef06459e779e3a9ce2971ad2abca879cc124ed15bdf70dfdaed0037e",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3717,7 +3717,7 @@
       "context": "Click the piano roll and select notes first; the current grid determines the step.",
       "whenToUse": "Delay a phrase by a rhythmic step.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "4d5670e0c76fa9e1e9f09bb4a2b469df0971eab018d16963a8e3e77b99321990",
+      "sourceFingerprint": "4c9c03e79d082562c47d1ef0e98f1e1b9641bced12735d38aa8221914634a842",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3781,7 +3781,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Nudge notes a little ahead of the beat.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "76912a6db53cb4b652160162810caf48f18f6f327f2db96a138f5cc8d02f689b",
+      "sourceFingerprint": "1d39546bea11eb873db1ccbbf2e5c2163150174244dbdab766bee2faba32c893",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3854,7 +3854,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Nudge notes a little behind the beat.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "9504d9e3f9c663e1e7621d2b6170ab2ca0714d11a6b5934d440a0679be1989bc",
+      "sourceFingerprint": "e5fd9f98706b570615ea9d77fd44d440c950b2a6999075f213bf5f117d233922",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3927,7 +3927,7 @@
       "context": "Click the piano roll and select notes first. A pitch move outside the valid note range leaves pitches unchanged.",
       "whenToUse": "Try a phrase one piano key higher.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "294696002a50808a1185ccd3e1bde2c703f9a7067d0b64557a7daef2486c3408",
+      "sourceFingerprint": "2d4d472723c9a2b545677d69e8495d778824eff125077060880549aeef136ee5",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -3991,7 +3991,7 @@
       "context": "Click the piano roll and select notes first. A pitch move outside the valid note range leaves pitches unchanged.",
       "whenToUse": "Try a phrase one piano key lower.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "2ee768dfa09160f7d9372977e3a3f03df15265b6763b2113fc9ff4e2c2ecdef4",
+      "sourceFingerprint": "79d85f91ba9e5b30a06839c72c41166c719cd30dc132e509e4e0ac1125047d73",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4055,7 +4055,7 @@
       "context": "Click the piano roll and select notes first; a move outside the valid note range leaves pitches unchanged.",
       "whenToUse": "Move a melody into a higher register.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "c9768a0d086b8700e884b3e7e0fb11eb1251686cfced82081b1cd7cbe460d291",
+      "sourceFingerprint": "c82ab50253f077a6370004ed9f8bcc726fd2b3a756e0fc7819a09d9ed5473754",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4128,7 +4128,7 @@
       "context": "Click the piano roll and select notes first; a move outside the valid note range leaves pitches unchanged.",
       "whenToUse": "Try the same melody in a lower register.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d043f6eeb744b1e09c5b7512ea4b30209a206cf87fd313e53f559b9f900365a6",
+      "sourceFingerprint": "9aebbec124d4d4c389f5b2fa5f929d85b9022de324fd358bb65cb09c088d3c9f",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4201,7 +4201,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Make a phrase more detached without moving note starts.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "918edd2549729a8fb52e51c18c4164f7ea6ad90381648846cde924a48a9203c8",
+      "sourceFingerprint": "56730c0563cf90fe325e785a75dd2bf30b8833e96a1cfd45a871d437ea8fdcd2",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4274,7 +4274,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Let a set of notes sustain longer.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "8f140bc0e84390c19d40afee9d5c0a9e53f5b86d98ed5e036264977d57e38f32",
+      "sourceFingerprint": "2968cb9087798bb1072f07c64b0754d7927d73828c1d1b5c52a8e3e27e344946",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4347,7 +4347,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Leave a small gap after a note.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "b925e4a254c96b609fa04c1b82259e57dc144ae1cc61951cfce293b9402570c1",
+      "sourceFingerprint": "ff06dec8b9a1e0e4d213a0e0e07822db2af277004c38d51a77588acc29b39b3e",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4429,7 +4429,7 @@
       "context": "Click the piano roll and select notes first.",
       "whenToUse": "Let a note ring a little longer.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "ef8f672ff5383c51d8a062325609c15f38270b15a44c4cbd9ca839b5d5f6c861",
+      "sourceFingerprint": "0d53b7a25a9ed5e967661b55ccccfd61db360877bf83c13ac8268881598d8702",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4511,7 +4511,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Walk along a line note by note to fix velocities or lengths without clicking each one.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "34ca6f58f372c2cbef34cc8c55b5a980606262996b55836aaa017f29f547a687",
+      "sourceFingerprint": "48d9fbaeec3c80eafa74c663d2a2b62cb65b2a9ee4728f81fbf5298ddac750be",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4584,7 +4584,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Step back along a line note by note.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "229be34b78619c655e966059e7b764232e13274507c20b8f104c78c770526bd6",
+      "sourceFingerprint": "dd1c820a6f417f26293011d793b9ee29514243ac3ac30ae0f5014c4160acdfdd",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4657,7 +4657,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Go through every note of a part in order, chords included.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "85b104bb0e1d401490d5f4862957501ca8d929b8d0524ee3913d66786963c528",
+      "sourceFingerprint": "372cbcec0cb7f204ddb2305e382ee6fcf4d68fa42ed4df196372050343529832",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4730,7 +4730,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Go back through the notes of a part one at a time.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "ba386720f8a0862be8295682dbf3e8e71cd7968aa5e76e392969b07411d72f29",
+      "sourceFingerprint": "63d080d304df142e3c248a7885d4633e68081e1c33d3637e1a449614ad2c31c7",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4803,7 +4803,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Select a run of notes on a key from the keyboard.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "c60c074375899f6abef697b65a0b05f490f55f864280f813c1715d52af15db16",
+      "sourceFingerprint": "6b440251b64dc5001915e76f184a76fe2675a6792bf4f628f848c75e328435bd",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4885,7 +4885,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Select a run of notes on a key from its end backwards, or step back a selection grown too far.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "6dd1c60e21aa6a16ee888cd24f45fa8e971b00942276261e2436e75f848b66ec",
+      "sourceFingerprint": "151df2b4e680c84ef57cad09599a39a6eeff89dd4bc21e641878a52e9814c63d",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -4967,7 +4967,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Select a passage note by note from the keyboard.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "21796dd6fb16d7631dfe7a3279ee747923be3590ddf157ebe10f5f44ec27a425",
+      "sourceFingerprint": "e565f2f1ce9406b2601537e4b71bce4d9c8fca9e56f453cd23e65cfe248d5454",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5049,7 +5049,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Select a passage backwards note by note, or step back a selection grown too far.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "8ee2acb47eeacead813a85fe3ce4655669cb87151e56a7158bc2cd83df08ba31",
+      "sourceFingerprint": "36375b917e628d78fc5975c09616d8d1727a00c9ec8cbcb2fbf71ea12c7f74d8",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5131,7 +5131,7 @@
       "context": "Click the piano-roll note grid first.",
       "whenToUse": "Alternate between adding notes and selecting them.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e838175244604521f5300cff9eb833cf1e296c19179f9d57ba94c082846cedd7",
+      "sourceFingerprint": "7103e52ac7bfed9f87306c257a1107ebaecd8b63579876efccb3898bac1e5933",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5195,7 +5195,7 @@
       "context": "Click the piano-roll note grid first. Workflow settings can also make a left-click on empty space draw a note.",
       "whenToUse": "Return to selecting notes after using another tool.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "4868e48cee872821b721cbf577c274753d5a331f6534e7d556fc7a71a24eb7c6",
+      "sourceFingerprint": "d69e8a4f5aed45f98b9c1900ec6524074acfe33f95219d010abcf31a9e20013c",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5259,7 +5259,7 @@
       "context": "Click the piano-roll note grid first; note placement follows the grid and workflow settings.",
       "whenToUse": "Enter a melody one note at a time.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "46432a8ed554efc286da8411d1aacd6304a9a229d25c55a643e7e90f7ea49725",
+      "sourceFingerprint": "5789801293728b7511812eed77c5256b1993c2930b237e5d96c97dc025ed3299",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5323,7 +5323,7 @@
       "context": "Click the piano-roll note grid first; note placement follows the grid and workflow settings.",
       "whenToUse": "Write a run of repeated notes with a drag.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e81c657becb64d3df01b590a07b861ce587724d546e2fb30c8847698233b0c18",
+      "sourceFingerprint": "99b6d5d588f46a778c78dd130ecc92254fb83c9d3b6aec658659a68134672004",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5387,7 +5387,7 @@
       "context": "Click the piano-roll note grid first.",
       "whenToUse": "Remove notes by pointing at them instead of making a selection first.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "693a1bb5b0ebe0ce690d056490768dac61fded68d088a77acf06b10cd7ff9d7d",
+      "sourceFingerprint": "e69e9702eca49bbb7e5ba48aa5d1e0a7413906ed1643129f2df5c89ab82227c0",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5451,7 +5451,7 @@
       "context": "Click the piano-roll note grid first; slicing follows the grid unless snapping is bypassed.",
       "whenToUse": "Break a sustained note into shorter parts.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "f48da348601dfccb8f0bfbf6ecf6ec4d5e9f4adb998fc857106639e668a7986c",
+      "sourceFingerprint": "bae43f52137a30534e1f5d0bd2b3c47e1169c1b8fbaa2defb3a670d2def60372",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5515,7 +5515,7 @@
       "context": "Requires an open project. While the piano roll has the keyboard (after a click in it) this key does nothing there, so it never acts on the clips behind the notes.",
       "whenToUse": "Mark a verse or another useful song position while listening.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "9be7d9f065ac6021a41602a542dbaee16a68a77221bf43d48915fc6e75addab4",
+      "sourceFingerprint": "ac3c9dbff47adae47c185ac56094343479de1c99d17d068a8aef8323aa4e3707",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5579,7 +5579,7 @@
       "context": "Works in the Arrangement with comped parts selected on a track that has take lanes.",
       "whenToUse": "Audition the take above for the same phrase without opening the take lanes.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "d58ce53ba83d487358300bf2d531ccf9a7434e6b0449f2359b291d3fb868ccc4",
+      "sourceFingerprint": "5a9a52fd6659b8b28b672482af8d18963694294b42d4fc4c42aabf2fa8611e03",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5652,7 +5652,7 @@
       "context": "Works in the Arrangement with comped parts selected on a track that has take lanes.",
       "whenToUse": "Audition the take below for the same phrase without opening the take lanes.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "90b19e9f29c1833cfe0a8c89f0ba0ae6a30158b90a67535f3fd7adab37dae41b",
+      "sourceFingerprint": "ad336a7e773bee6a3e26b72dce0cbf1ea00c5adbea89d163fd7df0992ba6216d",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5725,7 +5725,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Select tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "c861e8cabf73eea1c3ce0752b310808fae4ee1c0655df4d77f6a3cef85e34e8f",
+      "sourceFingerprint": "8043106365709c90538f7e77efdcb0bdba5e482c7fa10afb583af5edc59b927e",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5789,7 +5789,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Range tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "7f4184189b0654c306f8f8b0f72ffb0f428c9f1227cab5ffade007dada2c52c6",
+      "sourceFingerprint": "9e762a9279c2f82b96e0b019d8b56d76b1b396f5000dc1472d61463348870eee",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5853,7 +5853,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Split tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "4b92d9a3d185e8601f9cf9451995f616cf294ae21f507bee9bf2504c17055963",
+      "sourceFingerprint": "efbe308272752d0642287872ed7f64fe6636df87c6018c8b8e58b121fe9a56f9",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5917,7 +5917,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Erase tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "894bbfc69b3aad8778772be451ce5067029ec59e795bd67295e4d1b453ef7aba",
+      "sourceFingerprint": "fc48758ea8fd71b49cc1d3ba83ba9635f15085096fb936888c38ee0ef72d2c40",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -5981,7 +5981,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Draw tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "30f5d7cd37391f939d927e43ad0987c10fb03c076bef59e10a9bc37c23e1ac83",
+      "sourceFingerprint": "6c5dc9929a173ebc365bcc961448ff2c04c7bfaef67f1ce569d6102904d96635",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6045,7 +6045,7 @@
       "context": "Works while the Arrangement's toolbar is on (Settings › Arrangement › Toolbar) and the Arrangement was clicked last; with the piano roll clicked last the same key chooses its tool.",
       "whenToUse": "Switch to the Mute tool without moving the pointer to the toolbar.",
       "platformNotes": "The number keys are the same on every platform.",
-      "sourceFingerprint": "4691f78e254c7ac59488ad00326aa27766a58100432e03b4e88eb4d212e2cc0f",
+      "sourceFingerprint": "00332526a49a548bade7af64b9da0a7e900c73b7c29104bc205da937c99f1642",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6109,7 +6109,7 @@
       "context": "Works while the Arrangement has the keyboard (it was clicked last); with the piano roll clicked last the same keys change the piano roll's grid.",
       "whenToUse": "Cut or place clips on finer divisions without opening the grid menu.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "02029671f01905abf8af939574e05734bb0b863252d46343f04f04560f7de539",
+      "sourceFingerprint": "463b1783a01ba66b8515dfb538ea2cca31b3f96cc5ba44a8fb33a1722696b2b1",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6182,7 +6182,7 @@
       "context": "Works while the Arrangement has the keyboard (it was clicked last); with the piano roll clicked last the same keys change the piano roll's grid.",
       "whenToUse": "Move clips by bars rather than beats.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "88dbc2942b236a4eb7606aca68f8273f8303aa46dfbf87ae4aab3bbf3bc58b63",
+      "sourceFingerprint": "a2804d4dbc6f1567634c484806763fa07c5c8597e0e35c1cce3bbc5a4c4917c8",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6255,7 +6255,7 @@
       "context": "Works while the Arrangement has the keyboard (it was clicked last); with the piano roll clicked last the same keys change the piano roll's grid.",
       "whenToUse": "Place clips on triplet divisions.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "cb14931327be24c7cfb9a15628511874075b029ad137330869dc9cd7bd711007",
+      "sourceFingerprint": "fa85561230710e185af5bdca8cd4c250230a067a4cd70cefd7b58c696822ec70",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6328,7 +6328,7 @@
       "context": "Works while the Arrangement has the keyboard (it was clicked last); with the piano roll clicked last the same keys change the piano roll's grid.",
       "whenToUse": "Place clips anywhere for a while, as Alt does for one drag.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "1bd76ef7a4e15177efdb13938604a4bb1c15c445e6a18d4d56195cad9c0bdd36",
+      "sourceFingerprint": "0fe3da318cafa9f2b3860c0f89482f7dfca00753b718d376c598a4396a97d002",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6401,7 +6401,7 @@
       "context": "Click the piano-roll note grid first. This is separate from muting an Arrangement clip or device.",
       "whenToUse": "Try leaving individual notes out of a phrase without deleting them.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "7c2b26f4c494a338adddd10409a46f2dc10975eaaa4317a9852d724ef5c2d9ff",
+      "sourceFingerprint": "bd581639ed9c1392df8c1cf3310b394f95908f21a159ef26a4f9f5d3d0d7b75f",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6465,7 +6465,7 @@
       "context": "Click the piano roll first. It changes the piano roll's own grid only; the control bar's Quantize box is not affected. At the finest value the grid stays unchanged.",
       "whenToUse": "Place or move notes in smaller rhythmic steps.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "1a743b02341a54fd7a12227febf577c3f7ad4e3375223cbb85f924f33036bea2",
+      "sourceFingerprint": "8772481d68c6d8a3f91f519ff675cf92e0670cbdf89b6867f61359a12746734a",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6538,7 +6538,7 @@
       "context": "Click the piano roll first. With the Control bar grid setting it changes the control bar; at the coarsest value the grid stays unchanged.",
       "whenToUse": "Use larger rhythmic steps for a broad edit.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "e0aed17b1a6ab1297a7b979fc0f37a376968759ef061fa37503ada6826d8abfe",
+      "sourceFingerprint": "e683bdbe5db43a9937ceac26449510f27acd2f6b3f57da2896ceed2072ef2547",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6611,7 +6611,7 @@
       "context": "Click the piano roll first. It changes the piano roll's own grid only; the control bar's Quantize box is not affected.",
       "whenToUse": "Write a triplet rhythm instead of evenly paired subdivisions.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "6a6dbfbd2fe21a16762a20c50e3b5389657e28f507967ff68b2b7058de281efe",
+      "sourceFingerprint": "3bec5fd36a9ba7e552f86737d81bb6002775b42a7f8e352a0506f8bc5f22023b",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6684,7 +6684,7 @@
       "context": "Click the piano roll first. It changes snapping in the piano roll only; the control bar's Quantize box is not affected.",
       "whenToUse": "Adjust note timing freely without changing the visible grid.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "dc23785b6ed672803f7ef555408c4ec464ccec6fb00fc77202649ec1daa9425c",
+      "sourceFingerprint": "9e0e03183a48a96f7403dbb1fa22a71b07e49790679770df0a6663bc3fbe2322",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6757,7 +6757,7 @@
       "context": "Click the piano-roll note grid first; pitch positions are unchanged.",
       "whenToUse": "Inspect a short phrase without changing the rest of the clip.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "6b7f79daed6f4cf23372a7a7f26fe6728dc2d190eb77311b4d146d7ae4b79992",
+      "sourceFingerprint": "58e952ffa484de5633fa5b4db8179d8517b6b3bc5d5749c50dd470dbfc9f48d8",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6821,7 +6821,7 @@
       "context": "Click the piano-roll note grid first.",
       "whenToUse": "Return to the full phrase after zooming into selected notes.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "309484a1972fd8db98cf6238e5919f8719b7a85c4705047251200015da0b4820",
+      "sourceFingerprint": "3a1b407f6fc5e76cc47826bf1648481b62bb17ab1e91bae11adb5f71d737f5f2",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6894,7 +6894,7 @@
       "context": "Click the piano-roll note grid first. It is the same as Legato in the Notes tab of the clip panel's note tools.",
       "whenToUse": "Close the gaps in a line or a chord progression without dragging each note's end.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "03b99d8fdf54a627cb18be3b4da3dfc6a446817ed7b751fbb74953ed7b508b7f",
+      "sourceFingerprint": "6609c5ab38599eef3de8ca844c83f33eae1df2301c9232aa7f7a1dada8de9ca0",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -6967,7 +6967,7 @@
       "context": "Click the piano-roll note grid first. Elsewhere the same key is the Arrangement's loop.",
       "whenToUse": "Repeat a few beats of a clip while editing their notes.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "0c21a1bd1c44328c3ccc98b02675a290830e82d55ef2fcd0005f75262c782960",
+      "sourceFingerprint": "12f4e696147adc3a5ec05b4580fbaa777496eeb79bcc3e749c26cfcb7d7fb636",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7040,7 +7040,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Turn repeated or chopped notes back into one held note.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "5213867d256bba890f44a2d80620f9887608ec9194287a9b7001669909d1c29a",
+      "sourceFingerprint": "23b9e4a6b456e800a735e5bec3b4f859c96a0359a5bc4460eb33d91f5209a929",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7113,7 +7113,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Make a phrase fill exactly a bar or a gap.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "915d357cbd3f637bc91ff8707951f22670f9b943e34b5a0cd93d69b3955c5770",
+      "sourceFingerprint": "8d27b68e3e14ea766706a1dc75a956f0f8bfce2da5f59dd01d6675844d44c09f",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7195,7 +7195,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Keep only the part of a clip you want.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "769b1be41d8973c19cbb074af678eee366403c7db4112ea3160d758ad04ab164",
+      "sourceFingerprint": "acb414804358bae001609db79138da285c04625ae214bc87f48d298788b74ffe",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7277,7 +7277,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Cut notes at a stretch of time or a clicked point, or turn a selected long note into a run of grid-long ones.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "3775e975bead7c0c2b92d46aeee64b1e150fc12ff312dd4f16804eeedaa32b6d",
+      "sourceFingerprint": "7f3aa2b36d182738b60a51837fdc50b032bbf54645a7596456cabd166756fcdd",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7350,7 +7350,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Let a looped part vary in loudness from pass to pass.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "ddd834561f67613bebb0eb20acd438af95d5480442f89af81a583dffdde21d6c",
+      "sourceFingerprint": "03f8268cfd82c09517491ae93d28b7a6c82a5ddfdc0175501b70a8f9bc870d77",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7432,7 +7432,7 @@
       "context": "Click the piano-roll note grid first; the key works only while the piano roll has the keyboard.",
       "whenToUse": "Narrow, or turn downwards, the variation of a note's loudness.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "a80f7b51e8af94fa13cd1f6f3ca6b68629912986df127e199a69db96aa26b85a",
+      "sourceFingerprint": "9ba7a3ea911e7733c4b7c7f11fa8def103c0e66ccdb3b0a5f99c37e1ffb83014",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7514,7 +7514,7 @@
       "context": "Available without an open project. No key is assigned by default; bind one in Settings → Shortcuts.",
       "whenToUse": "Check which build you are using before reporting a problem.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "03ea48a837c88ea9c37513a0d552a6b17f4f8b4b5803311a9c570be73d2ffe42",
+      "sourceFingerprint": "b3c989708806ecc496476832a7b1cf4199757834f501e867006fd19674c16532",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7542,7 +7542,7 @@
       "context": "Requires a selected MIDI clip or an audio clip with a compatible clip-editing plug-in; without an editable clip it does nothing.",
       "whenToUse": "Move from note or clip editing to the track's instrument and effects.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "155711f9ac6fadb2af45d878bf82d0268705acffe492b0ec1465906f80e7b0b5",
+      "sourceFingerprint": "afb292767504ee7cef6a610f819b167f65c2f98a09f6e58a92c60eeb5c3a9946",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7624,7 +7624,7 @@
       "context": "Select an audio clip in Arrangement first and scan/install a compatible ARA plug-in. MIDI clips use the piano roll instead.",
       "whenToUse": "Edit an audio clip using a compatible pitch or timing editor.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "79088b3434a1687fe51a03651850e8beb9906c1bf007f5bb478cdbc28a615bd9",
+      "sourceFingerprint": "ae4668395c1e940803fe3e529cd40bce8b5bea58775122c8d13f3df119255126",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7697,7 +7697,7 @@
       "context": "Select a track first; without a running plug-in there is no editor to toggle. This main implementation targets the first running plug-in, rather than a device-panel pick.",
       "whenToUse": "Bring an instrument or effect's own editor into view.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "4da294de5e02afe93529b5ea277a5a4f5aab86494668ad52d971612e6de67aaa",
+      "sourceFingerprint": "40c715e303f2a7fe9fcb48510552c68b3b67a873d1d25dda9b52f7ba00ee0b2b",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7761,7 +7761,7 @@
       "context": "Requires an open project with a redo step available.",
       "whenToUse": "Restore an edit after trying Undo.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "8cfd4a2daaf8ad7979bf9ab2be368a95764b40bf78098cb9e0797b796c0a4cd5",
+      "sourceFingerprint": "d06bc508a057096f6214f8f242ee049e35aa76ff922f2162d243bdfe14b66052",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7879,7 +7879,7 @@
       "context": "Requires an open project and an edit in its undo history; an empty history has nothing to undo.",
       "whenToUse": "Compare an edit with the state before it.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "2e5c8f31bed3ea3dae2e4940d10a220bc310914f683c14c9471eeaedf5edbb61",
+      "sourceFingerprint": "162a5177f67ef00dc5dd4e2686f08ee7413d8ccc3de9b0e7958669b6a117b49c",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -7952,7 +7952,7 @@
       "context": "Requires at least two open projects; with fewer projects this action does nothing.",
       "whenToUse": "Switch to the next idea without closing the current project.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "bd86647a498ec0fab1c758bad9a9102720409dc3829f8d5e1ae5950357ce7466",
+      "sourceFingerprint": "c6993916fd6b7743fa2a11237361c6b785e855c1233d1d2431fd36f17c487bcc",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -8025,7 +8025,7 @@
       "context": "Requires at least two open projects; with fewer projects this action does nothing.",
       "whenToUse": "Return to the previous open project.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "f4d450239e8f26cd0939bcda75b89af1d2088573ed46b6d5b1d988f179a78d99",
+      "sourceFingerprint": "76feebcb8b3de1dd2cac78a319896d5153c37b639d3e39019176ebb99ff0fbec",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
@@ -8107,7 +8107,7 @@
       "context": "Requires an open project. A time selection takes precedence over selected clips. While the piano roll has the keyboard (after a click in it) the key is the clip's own loop instead, so it never changes the Arrangement's loop behind the notes being edited.",
       "whenToUse": "Repeat a selected passage while adjusting it.",
       "platformNotes": "Windows and Linux use Ctrl and Alt. On macOS those modifiers are Cmd and Option; the action and focus requirements are the same.",
-      "sourceFingerprint": "da49ba42517342f2cc2d0d64d7d028592e7cc86d3d0ffcbb9eb602f3ca4f647c",
+      "sourceFingerprint": "00309703b9939868e682cf548c9fd097d9d89817e09ef667a12d6e1ecfe314dd",
       "helpStatus": "reviewed",
       "bindings": {
         "Select-first": {
