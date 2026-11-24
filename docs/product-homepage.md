@@ -28,9 +28,10 @@ Checked official DAW main `5a8bb9a` (2026-10-21), without modifying the native a
 - `docs/spec/ui-session-view.md`, `crates/ui/src/app.rs`: Session and Arrangement in one project.
 - `docs/decisions/0006-plug-in-hosting.md`, `crates/plugin-host/src/vst3.rs`,
   `crates/plugin-host/src/clap.rs`: sandboxed CLAP/VST3 and transport context. VST2 hosting
-  landed in suhina-daw#1073 (2026-11). `.flp` import is in progress (epic suhina-daw#271,
-  suhina-daw#1404) and DAWproject is planned next; the home page says so in the import note.
-  Update that note when either lands.
+  landed in suhina-daw#1073 (2026-11). `.flp` projects open since suhina-daw#1446 (2026-11-14),
+  partly: what is not brought in is named in the import's warnings (`docs/spec/flp-model-mapping.md`,
+  epic suhina-daw#271 still open). DAWproject is planned next; the home page says so in the import
+  note. Update that note when it lands.
 - `docs/decisions/0028-ara-hosting.md`, `crates/plugin-host/src/ara.rs`,
   `crates/ui/src/app.rs::open_ara_editor`: existing experimental ARA clip editing. Do not claim
   that the wider pending multitrack/shared-document work is in main.
@@ -99,6 +100,12 @@ Added with the redesign and checked against DAW main on 2026-11-13; recheck befo
   (`suhina-project`), a community member's theme (`suhina-theme-glass`) and three silent video
   loops (`clip-*.mp4`, cropped from screen recordings). They show third-party plug-in and sample
   names from the projects that were open.
+- Pictures replaced and added on 2026-11-24 from captures the contributor supplied, the same ones
+  the DAW README shows (suhina-daw#1702): the hero (`suhina-project`, now a seventeen-track
+  Arrangement), two theme slides (`suhina-theme-light`, `suhina-theme-settings`), the Plug-in
+  manager in the plug-ins chapter (`suhina-plugin-manager`) and the Missing files window in the
+  import chapter (`suhina-missing-files`, the user name in its paths hidden). They show
+  third-party plug-in names.
 - Progress: the chapter links to `suhina-daw/suhina-status`, where a bot redraws the status
   figure daily, so no number is written here. The wall of screenshots beside it is decoration
   made of the pictures above.
