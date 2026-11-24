@@ -102,10 +102,8 @@ Added with the redesign and checked against DAW main on 2026-11-13; recheck befo
   names from the projects that were open.
 - Pictures replaced and added on 2026-11-24 from captures the contributor supplied, the same ones
   the DAW README shows (suhina-daw#1702): the hero (`suhina-project`, now a seventeen-track
-  Arrangement), two theme slides (`suhina-theme-light`, `suhina-theme-settings`), the Plug-in
-  manager in the plug-ins chapter (`suhina-plugin-manager`) and the Missing files window in the
-  import chapter (`suhina-missing-files`, the user name in its paths hidden). They show
-  third-party plug-in names.
+  Arrangement) and two theme slides (`suhina-theme-light`, `suhina-theme-settings`). The plug-ins
+  and import chapters stay text only. The hero shows third-party plug-in names.
 - Progress: the chapter links to `suhina-daw/suhina-status`, where a bot redraws the status
   figure daily, so no number is written here. The wall of screenshots beside it is decoration
   made of the pictures above.
