@@ -14,7 +14,7 @@ const base = import.meta.env.BASE_URL
   <div class="product-home">
     <section id="home">
       <figure class="hero-media">
-        <AppShot name="suhina-project" alt="A song of seventy tracks in Suhina's Arrangement: audio and MIDI clips in track colors along the timeline, with a clip's warp, gain and pitch controls below" sizes="100vw" :width="1919" :height="917" eager />
+        <AppShot name="suhina-project" alt="A song of seventeen tracks in Suhina's Arrangement: pattern clips and audio in colored track groups along the timeline" sizes="100vw" :width="1920" :height="1032" eager />
       </figure>
       <div class="hero-top">
         <h1>Make music<br>in the <span class="wave">open.<svg viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36C38 6 82 0 122 22c42 23 88 30 178 2-78 46-150 48-192 20C74 22 42 22 0 36Z"/></svg></span></h1>
@@ -66,10 +66,16 @@ const base = import.meta.env.BASE_URL
 
     <HomeChapter id="plug-ins" title="Bring your plug-ins along." ruled>
       <p>Use CLAP, VST3 and VST2 instruments and effects in a separate plug-in host. Supported plug-ins receive the song's tempo and playback position.</p><p class="note">Experimental ARA support lets compatible editors work with Arrangement audio clips. Compatibility and the wider ARA workflow are still being developed.</p>
+      <template #after>
+      <figure class="section-shot"><AppShot name="suhina-plugin-manager" alt="Suhina's Plug-in manager: scanned plug-ins filtered by type, format and vendor, each with its version and whether it is enabled" :width="1176" :height="762" sizes="(min-width: 1000px) 58vw, 100vw" /><figcaption>The Plug-in manager scans your plug-in folders. Filter by type, format or vendor and choose which ones Suhina offers.</figcaption></figure>
+      </template>
     </HomeChapter>
 
     <HomeChapter id="import" title="A new place for an old project.">
-      <p>Open existing .als projects, bring in audio and MIDI, and save your work in Suhina's own project format.</p><p class="note">Import of .flp projects is under way, and DAWproject files come next. Project import is evolving. Not every imported device or feature is reproduced; try your material and tell us what needs work.</p>
+      <p>Open existing .als and .flp projects, bring in audio and MIDI, and save your work in Suhina's own project format.</p><p class="note">DAWproject files come next. Project import is evolving. Not every imported device or feature is reproduced; what was left out is named in the import's warnings. Try your material and tell us what needs work.</p>
+      <template #after>
+      <figure class="section-shot"><AppShot name="suhina-missing-files" alt="Suhina's Missing files window: the samples a project could not find, with a folder to search and a Locate button for each one" :width="1920" :height="1032" sizes="(min-width: 1000px) 58vw, 100vw" /><figcaption>Samples moved since the project was saved? Search a folder or locate each file, and Suhina relinks them.</figcaption></figure>
+      </template>
     </HomeChapter>
 
     <HomeChapter id="progress" title="Built in public. Counted in public." ruled>
@@ -114,6 +120,10 @@ const base = import.meta.env.BASE_URL
 .hero-media img { width: 100%; max-height: 52vh; object-fit: cover; object-position: top; }
 .command code { display: block; font-size: clamp(18px, 3.2vw, 44px); letter-spacing: -.02em; overflow-wrap: anywhere; }
 
+.section-shot { grid-column: 2 / -1; margin: clamp(8px, 2vw, 24px) 0 0; }
+.section-shot img { border: 1px solid var(--line); }
+.section-shot figcaption { margin-top: 12px; font-size: 14px; color: var(--olive); }
+
 .rows { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; }
 .item-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 var(--gutter); }
 .item-list li { padding: 16px 0 20px; border-top: 1px solid var(--line); }
@@ -138,6 +148,7 @@ const base = import.meta.env.BASE_URL
   .product-home { --cols: minmax(0, 1fr) minmax(0, 1fr) 0; }
   .download-notes { grid-template-columns: 1fr; gap: 0; }
 }
+@media (max-width: 720px) { .section-shot { grid-column: 1 / -1; } }
 @media (max-width: 720px) {
   .hero-top, .platforms a { grid-template-columns: 1fr; }
   .hero-top { gap: 24px; }

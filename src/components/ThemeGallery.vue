@@ -4,11 +4,13 @@ import AppShot from './AppShot.vue'
 
 const slides = [
   { file: 'suhina-theme-glass', title: 'A community theme', alt: 'Suhina Arrangement in a translucent blue theme on macOS, with a CLAP synth\'s parameters in the device panel', width: 1920, height: 1162 },
+  { file: 'suhina-theme-light', title: 'A light theme', alt: 'Suhina Launcher in a light theme: MIDI and audio tracks with their clip slots above the mixer', width: 1920, height: 1032 },
   { file: 'suhina-theme-sheet', title: 'Suhina Sheet', alt: 'Suhina Session in the green and white Suhina Sheet theme' },
   { file: 'suhina-theme-blocks', title: 'Suhina Blocks', alt: 'Suhina Session in the brown, pixel-textured Suhina Blocks theme' },
   { file: 'suhina-mixer-horizontal', title: 'A horizontal mixer', alt: 'Suhina Session in a dark theme whose mixer has horizontal faders and level meters' },
   { file: 'suhina-session-compact', title: 'A compact Session', alt: 'Suhina Session in a dark theme with a compact mixer of pan dials and short faders' },
   { file: 'suhina-toolbar-editor', title: 'Editing the toolbar', alt: 'Suhina with the Edit toolbar panel open and the toolbar controls outlined for dragging on a snap grid', width: 1920, height: 1032 },
+  { file: 'suhina-theme-settings', title: 'Choosing a theme', alt: "Suhina's Settings at Themes: the current theme with its color variants, and the built-in themes to choose from", width: 1920, height: 1032 },
 ]
 const track = ref<HTMLElement | null>(null)
 const current = ref(0)
